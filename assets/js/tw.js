@@ -32,13 +32,25 @@ function drawMatrix(matrix, offset) {
 }
 
 // This function clears the canvas so that it can re-draw the shape
+// Employed the requestAnimationFrame method for the following reasons:
+// 1. Browser can optimize it, so animations will be smoother
+// 2. Animations in inactive tabs will stop, allowing the CPU to pause and reset
+// 3. More batter-friendly
+
+let dropCounter = 0;
+let dropInterval = 1000;
 
 let lastTime = 0;
-
 function update(time = 0) {
 	const deltaTime = time - lastTime;
 	lastTime = time;
-	console.log(deltaTime);
+
+	dropCounter += deltaTime;
+	if (dropCounter > dropInterval) {
+		player.pos.y++;
+		dropCounter = 0;
+}
+	
 	draw();
 	requestAnimationFrame(update);
 

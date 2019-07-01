@@ -32,7 +32,7 @@ function drawMatrix(matrix, offset) {
 }
 
 // This function clears the canvas so that it can re-draw the shape
-// Employed the requestAnimationFrame method for the following reasons:
+// The requestAnimationFrame method for the following reasons:
 // 1. Browser can optimize it, so animations will be smoother
 // 2. Animations in inactive tabs will stop, allowing the CPU to pause and reset
 // 3. More batter-friendly
@@ -60,5 +60,13 @@ const player = {
 	pos: {x: 5, y: 5},
 	matrix: matrix,
 }
+
+// addEventLister method attaches an event handler to the specified element without overriding existing event handlers so you can add many event handlers to one element
+
+document.addEventListener('keydown', event => {
+	if (event.keyCode === 37) {
+		player.pos.x--;
+	}  else if (event.keyCode ===39)
+})
 
 update();

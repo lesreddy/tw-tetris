@@ -32,10 +32,15 @@ function drawMatrix(matrix, offset) {
 }
 
 // This function clears the canvas so that it can re-draw the shape
-// The requestAnimationFrame method for the following reasons:
+// The requestAnimationFrame method is used for the following reasons:
 // 1. Browser can optimize it, so animations will be smoother
 // 2. Animations in inactive tabs will stop, allowing the CPU to pause and reset
-// 3. More batter-friendly
+// 3. Battery-friendly
+
+function playerDrop() {
+	player.pos.y++;
+	dropCounter = 0;
+}
 
 let dropCounter = 0;
 let dropInterval = 1000;
@@ -47,8 +52,7 @@ function update(time = 0) {
 
 	dropCounter += deltaTime;
 	if (dropCounter > dropInterval) {
-		player.pos.y++;
-		dropCounter = 0;
+		playerDrop();
 }
 	
 	draw();
@@ -61,12 +65,18 @@ const player = {
 	matrix: matrix,
 }
 
-// addEventLister method attaches an event handler to the specified element without overriding existing event handlers so you can add many event handlers to one element
+/* addEventLister method attaches an event handler to the specified element
+without overriding existing event handlers so you can add many event
+handlers to one element */
 
 document.addEventListener('keydown', event => {
 	if (event.keyCode === 37) {
 		player.pos.x--;
-	}  else if (event.keyCode ===39)
-})
+	}  else if (event.keyCode === 39) {
+		player.pos.x++;
+	} else if (event.keyCode === 40) {
+	playerDrop();
+	}
+});
 
 update();

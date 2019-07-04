@@ -40,12 +40,13 @@ function draw() {
 	context.fillStyle = '#000';
 	context.fillRect(0,0, canvas.width, canvas.height);
 
+//below methoed draws the shape on the arena
 
-	drawMatrix(arena, {x: 0, u: 0});
+	drawMatrix(arena, {x: 0, y: 0});
 	drawMatrix(player.matrix, player.pos);
 }
 
-// This function clears the canvas so that it can re-draw the shape
+// Below function clears the canvas so that it can re-draw the shape
 
 function drawMatrix(matrix, offset) {
 	matrix.forEach((row, y) => {
@@ -60,18 +61,17 @@ function drawMatrix(matrix, offset) {
 	})
 }
 
+//The below function will copy all the values from the player into the arena
+
 function merge(arena, player) {
-	player.matrix.forEach((row,y) => {
-		row.forEach((value,x) => {
+	player.matrix.forEach((row, y) => {
+		row.forEach((value, x) => {
 			if (value !== 0) {
 				arena[y + player.pos.y][x + player.pos.x] = value;
 			}
-		})
-	})
+		});
+	});
 }
-
-
-
 
 function playerDrop() {
 	player.pos.y++;
@@ -82,6 +82,15 @@ function playerDrop() {
 
 	}
 	dropCounter = 0;
+}
+
+//Below function ensures the pieces collides with the edge of arena and other pieces
+
+function playerMove(dir) {
+	player.pos.x += dir;
+	if (collide(arena, player)) {
+		player.pos.x -= dir;
+	}
 }
 
 let dropCounter = 0;
@@ -119,9 +128,9 @@ handlers to one element */
 
 document.addEventListener('keydown', event => {
 	if (event.keyCode === 37) {
-		player.pos.x--;
+		playerMove(-1);
 	}  else if (event.keyCode === 39) {
-		player.pos.x++;
+		playerMove(1);
 	} else if (event.keyCode === 40) {
 	playerDrop();
 	}

@@ -36,6 +36,10 @@ function createMatrix(w, h) {
 	return matrix;
 }
 
+function createPiece(type) {
+	
+}
+
 function draw() {
 	context.fillStyle = '#000';
 	context.fillRect(0,0, canvas.width, canvas.height);
@@ -93,7 +97,8 @@ function playerMove(dir) {
 	}
 }
 
-//below function implements the player rotate whilst ensure it rotates within arena
+/*below function implements the player rotate function so a piece can rotates
+but importantly makes it stay in the playing arena*/
 
 function playerRotate(dir) {
 	const pos = player.pos.x;

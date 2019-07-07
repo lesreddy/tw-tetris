@@ -41,38 +41,38 @@ function createPiece(type) {
 		];
 	} else if (type === 'O') {
 		return [
-			[1, 1],
-			[1, 1],
+			[2, 2],
+			[2, 2],
 		];
 	} else if (type === 'L') {
 		return [
-			[0, 1, 0],
-    		[0, 1, 0],
-    		[0, 1, 1],
+			[0, 3, 0],
+    		[0, 3, 0],
+    		[0, 3, 3],
 		];
 	} else if (type === 'J') {
 		return [
-			[0, 1, 0],
-    		[0, 1, 0],
-    		[1, 1, 0],
+			[0, 4, 0],
+    		[0, 4, 0],
+    		[4, 4, 0],
 		];
 	} else if (type === 'I') {
 		return [
-			[0, 1, 0, 0],
-    		[0, 1, 0, 0],
-			[0, 1, 0, 0],
-			[0, 1, 0, 0],
+			[0, 5, 0, 0],
+    		[0, 5, 0, 0],
+			[0, 5, 0, 0],
+			[0, 5, 0, 0],
 		];
 	} else if (type === 'S') {
 		return [
-			[0, 1, 1],
-    		[1, 1, 0],
+			[0, 6, 6],
+    		[6, 6, 0],
     		[0, 0, 0],
 		];
 	} else if (type === 'Z') {
 		return [
-			[1, 1, 0],
-    		[0, 1, 1],
+			[7, 7, 0],
+    		[0, 7, 7],
     		[0, 0, 0],
 		];
 	}
@@ -142,7 +142,11 @@ function playerReset() {
 	player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
 	player.pos.y = 0;
 	player.pos.x = (arena[0].length / 2 | 0) -
-		           (player.matrix[0].length / 2 | 0);
+				   (player.matrix[0].length / 2 | 0);
+	// below method will ensure the game resets when pieces reach the top
+	 if (collide(arena, player)) {
+		arena.forEach(row => row.fill(0));
+	}
 }
 
 /*below function implements the player rotate function so a piece can rotates
@@ -205,6 +209,17 @@ function update(time = 0) {
 	requestAnimationFrame(update);
 
 }
+
+const colors = [
+	null,
+	'red',
+	'blue',
+	'violet',
+	'green',
+	'purple',
+	'orange',
+	'pink'
+];
 
 const arena = createMatrix(12, 20);
 

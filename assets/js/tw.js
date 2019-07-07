@@ -5,11 +5,7 @@ context.scale(20,20);
 
 
 
-const matrix = [
-    [0,0,0],
-    [1,1,1],
-    [0,1,0],
-];
+
 
 /* This function will allow the pieces to stay within
  the canvas when moving pieces come down or are moved side to side */
@@ -37,7 +33,48 @@ function createMatrix(w, h) {
 }
 
 function createPiece(type) {
-	
+	if (type === 'T') {
+		return [
+			[0, 0, 0],
+    		[1, 1, 1],
+    		[0, 1, 0],
+		];
+	} else if (type === 'O') {
+		return [
+			[1, 1],
+			[1, 1],
+		];
+	} else if (type === 'L') {
+		return [
+			[0, 1, 0],
+    		[0, 1, 0],
+    		[0, 1, 1],
+		];
+	} else if (type === 'J') {
+		return [
+			[0, 1, 0],
+    		[0, 1, 0],
+    		[1, 1, 0],
+		];
+	} else if (type === 'I') {
+		return [
+			[0, 1, 0, 0],
+    		[0, 1, 0, 0],
+			[0, 1, 0, 0],
+			[0, 1, 0, 0],
+		];
+	} else if (type === 'S') {
+		return [
+			[0, 1, 1],
+    		[1, 1, 0],
+    		[0, 0, 0],
+		];
+	} else if (type === 'Z') {
+		return [
+			[1, 1, 0],
+    		[0, 1, 1],
+    		[0, 0, 0],
+		];
 }
 
 function draw() {
@@ -163,7 +200,7 @@ const arena = createMatrix(12, 20);
 
 const player = {
 	pos: {x: 5, y: 5},
-	matrix: matrix,
+	matrix: createPiece('T'),
 }
 
 /* addEventLister method attaches an event handler to the specified element

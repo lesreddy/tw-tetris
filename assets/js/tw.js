@@ -3,7 +3,23 @@ const context = canvas.getContext('2d');
 
 context.scale(20,20);
 
+/* arenaSweep function creates the line remove
+component of the game, ie when a complete line is formed
+with the random pieces it should be removed from the arena */
 
+function arenaSweep() {
+	outer: for (let y = arena.length -1; y > 0; --y) {
+		for (let x = 0; x < arena[y].length; ++x) {
+			if (arena[y][x] === 0) {
+				continue outer;
+			}
+		}
+
+		const row = arena.splice(y, 1)[0].fill(0);
+		arena.unshift(row);
+		++y;
+	}
+}
 
 
 
@@ -121,7 +137,7 @@ function playerDrop() {
 		player.pos.y--;
 		merge(arena, player);
 		playerReset();
-
+		arenaSweep();
 	}
 	dropCounter = 0;
 }

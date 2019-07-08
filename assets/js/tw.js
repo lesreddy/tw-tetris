@@ -8,6 +8,7 @@ component of the game, ie when a complete line is formed
 with the random pieces it should be removed from the arena */
 
 function arenaSweep() {
+	let rowCount = 1;
 	outer: for (let y = arena.length -1; y > 0; --y) {
 		for (let x = 0; x < arena[y].length; ++x) {
 			if (arena[y][x] === 0) {
@@ -18,6 +19,9 @@ function arenaSweep() {
 		const row = arena.splice(y, 1)[0].fill(0);
 		arena.unshift(row);
 		++y;
+
+		player.score += rowCount * 50;
+		rowCount *= 2;
 	}
 }
 
@@ -138,6 +142,7 @@ function playerDrop() {
 		merge(arena, player);
 		playerReset();
 		arenaSweep();
+		updateScore();
 	}
 	dropCounter = 0;
 }
@@ -162,6 +167,8 @@ function playerReset() {
 	// below method will ensure the game resets when pieces reach the top
 	 if (collide(arena, player)) {
 		arena.forEach(row => row.fill(0));
+		player.score = 0;
+		updateScore();
 	}
 }
 
@@ -226,6 +233,12 @@ function update(time = 0) {
 
 }
 
+// below function creates a score for the game
+
+function updateScore() {
+	document.getElementById('score').innerText = player.score;
+}
+
 const colors = [
 	null,
 	'#FF0D72',
@@ -241,8 +254,9 @@ const arena = createMatrix(12, 20);
 
 
 const player = {
-	pos: {x: 5, y: 5},
-	matrix: createPiece('T'),
+	pos: {x: 0, y: 0},
+	matrix: null,
+	score: 0,
 }
 
 /* addEventLister method attaches an event handler to the specified element
@@ -263,4 +277,6 @@ document.addEventListener('keydown', event => {
 	}
 });
 
+playerReset();
+updateScore();
 update();

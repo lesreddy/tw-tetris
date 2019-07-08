@@ -1,3 +1,7 @@
 body {
-    background-color: blue;
+    background: #202028
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 2em;
+    text-align: center;
 }

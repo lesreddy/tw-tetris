@@ -1,24 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
 body {
     
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 2em;
-    text-align: center;
+}
+.wrapper {
+background: url('../images/butterflies.jpg'); /* The image used */  
+height: 700px; /* You must set a specified height */
+background-position: center; /* Center the image */
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-#wrapper {
-background-image: url("butterflies.jpg"); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 700px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */background-image: url("assets\images\butterflies resized.jpg.");
+h1 {
+    font-family: "Permanent Marker", sans-serif;
+    text-align: center;
+    color: white;
 }
 
 canvas {
     border: solid.2em #fff;
     height: 80vh;
+    text-align: center;
 }
 #tetris {
-    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     }
+
+#score {
+    font-family: "Permanent Marker", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}

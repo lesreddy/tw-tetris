@@ -1,4 +1,8 @@
+
+
 const canvas = document.getElementById('tetris');
+var heightRatio = 1.5;
+canvas.height = canvas.width * heightRatio;
 const context = canvas.getContext('2d');
 
 context.scale(20,20);

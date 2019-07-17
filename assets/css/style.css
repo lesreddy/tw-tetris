@@ -1,12 +1,24 @@
 body {
-    background: #202028;
+    
     color: #fff;
     font-family: sans-serif;
     font-size: 2em;
     text-align: center;
 }
 
+#wrapper {
+background-image: url("butterflies.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 700px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */background-image: url("assets\images\butterflies resized.jpg.");
+}
+
 canvas {
     border: solid.2em #fff;
     height: 80vh;
 }
+#tetris {
+    width: 50%;
+    }

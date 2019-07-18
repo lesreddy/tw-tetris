@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
-body {
-    
-}
-.wrapper {
+#wrapper {
 background: url('../images/butterflies.jpg'); /* The image used */  
-height: 700px; /* You must set a specified height */
+height: 100vh; /* You must set a specified height */
 background-position: center; /* Center the image */
 background-repeat: no-repeat; /* Do not repeat the image */
 background-size: cover; /* Resize the background image to cover the entire container */
@@ -14,23 +11,35 @@ background-size: cover; /* Resize the background image to cover the entire conta
 h1 {
     font-family: "Permanent Marker", sans-serif;
     text-align: center;
-    color: white;
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-canvas {
-    border: solid.2em #fff;
-    height: 80vh;
-    text-align: center;
-}
 #tetris {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: solid.2em #fff;
+    height: 80vh;
+    opacity: 0.75;
     }
 
 #score {
     font-family: "Permanent Marker", sans-serif;
     text-align: center;
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
+}
+
+.label {
+    font-family: permanent marker, sans-serif;
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border: 1px black;
+    background: grey;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 25px;
+
+
 }

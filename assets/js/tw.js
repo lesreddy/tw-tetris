@@ -1,8 +1,6 @@
 
 
 const canvas = document.getElementById('tetris');
-var heightRatio = 1.5;
-canvas.height = canvas.width * heightRatio;
 const context = canvas.getContext('2d');
 
 context.scale(20,20);
@@ -103,7 +101,7 @@ function createPiece(type) {
 }
 
 function draw() {
-	context.fillStyle = '#000';
+	context.fillStyle = 'rgba(0,0,0, 1)';
 	context.fillRect(0,0, canvas.width, canvas.height);
 
 //below methoed draws the shape on the arena

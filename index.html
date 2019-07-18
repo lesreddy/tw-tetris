@@ -11,11 +11,68 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <h1 class='heading'>Totally Wild Tetris</h1>
-        <canvas id="tetris" width="240" height="400"></canvas>
-        <div id="score"></div>        
-    </div>
+    <div id="wrapper">
+        <h1 class='heading, col'>Totally Wild Tetris</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class = "col-6">
+                <canvas  id="tetris" width="240" height="400"></canvas>
+                </div>
+                <div class="col-6">
+                <h1>Totally Wild Tetris</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6 label">
+                    <div class="row">
+                        <div class="col-6 key">
+                            NAME:
+                        </div>
+                        <div class="col-6 key">
+                            <span id=""></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 label">
+                    <div class="row">
+                        <div class="col-6 key">
+                            SCORE:
+                        </div>
+                        <div class="col-6 key">
+                            <span id="score"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 label">
+                    <div class="row">
+                        <div class="col-6 key">
+                            TIME:
+                        </div>
+                        <div class="col-6 key">
+                            <span id=""></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 label">
+                    <div class="row">
+                        <div class="col-6 key">
+                            LEVEL:
+                        </div>
+                        <div class="col-6 key">
+                            <span id="score"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <script src="assets/js/tw.js"></script>
 </body>
 

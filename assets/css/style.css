@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
-#wrapper {
+.butterfly {
 background: url('../images/butterflies.jpg'); /* The image used */  
 height: 100vh; /* You must set a specified height */
 background-position: center; /* Center the image */
 background-repeat: no-repeat; /* Do not repeat the image */
 background-size: cover; /* Resize the background image to cover the entire container */
 }
+
+.macaw {
+    background: url('../images/macaw.jpg'); /* The image used */  
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    }
 
 .logo {
     font-family: "Permanent Marker", sans-serif;
@@ -32,6 +40,11 @@ background-size: cover; /* Resize the background image to cover the entire conta
     font-size: 1rem;
 }
 
+.narrower {
+    padding-top: 5px;
+}
+
+
 .label {
     font-family: permanent marker, sans-serif;
     color: yellow;
@@ -49,3 +62,10 @@ background-size: cover; /* Resize the background image to cover the entire conta
     .logo {
       font-size: 1.75rem;
     }
+
+@media (min-width: 540px) and (max-width: 1200px) {
+    .narrower {
+        padding-right: 75px;
+        padding-left: 75px;
+    }
+}

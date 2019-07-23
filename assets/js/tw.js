@@ -239,6 +239,10 @@ function update(time = 0) {
 
 function updateScore() {
 	document.getElementById('score').innerText = player.score;
+	if (player.score += 500){
+		el.classList.remove("butterfly");
+		el.classList.add("macaw")
+	}
 }
 
 const colors = [

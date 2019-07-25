@@ -17,10 +17,10 @@
         </nav>
         <div class="container space">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-xl-6">
                     <canvas id="tetris" width="240" height="400"></canvas>
                 </div>
-                <div class="d-none d-lg-block col-lg-6 space">
+                <div class="d-none d-xl-block col-xl-6 space">
                     <div class="back space">
                     <p class="sub">Choose Your Background</p>
                     <div class="d-flex justify-content-around space">
@@ -45,8 +45,9 @@
             </div>
         </div>
 
-        <div class="container offset-sm-2 col-sm-8 d-lg-none">
-            <div class="row">
+        <div class="container space offset-sm-2 col-sm-8 d-xl-none">
+            <div class="container">
+                <div class="row">
                     <div class="label col-6">
                             <div class="row">
                                 <div class="key col-6">
@@ -67,12 +68,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+                </div>
+                <div class="row">
                     <div class="label col-6">
                             <div class="row">
                                 <div class="key col-6">
-                                    NAME:
+                                    TIME:
                                 </div>
                                 <div class="key col-6">
                                     <span id=""></span>
@@ -82,16 +83,41 @@
                 <div class="label col-6">
                     <div class="row">
                         <div class="key col-6">
-                            SCORE:
+                            LEVEL:
                         </div>
                         <div class="key col-6">
                             <span id="score"></span>
                         </div>
                     </div>
+                </div>
+            </div>
+            </div>
+        
+        
+        </div>
+    </div>
+    <div>
+        <div class="container-fluid offset-sm-2 col-sm-8 d-xl-none space">
+            <div class="container back space">
+                <p class="row sub justify-content-center">Choose Your Background</p>
+                <div class="row">
+                <div class="col-6">
+                <button class="btn-block btn-success" onclick="butterBack()">Butterflies</button>
+                <button class="btn-block btn-success" onclick="macawBack()">Macaw</button>
+                <button class="btn-block btn-success" onclick="frogBack()">Frog</button>
+                <button class="btn-block btn-success" onclick="snakeBack()">Snake</button>
+                <button class="btn-block btn-success" onclick="gorillaBack()">Gorilla</button>
+                </div>
+                <div class="col-6">
+                <button class="btn-block btn-success" onclick="sharkBack()">Shark</button>
+                <button class="btn-block btn-success" onclick="crocBack()">Crocodile</button>
+                <button class="btn-block btn-success" onclick="tigerBack()">Tiger</button>
+                <button class="btn-block btn-success" onclick="elephantBack()">Elephant</button>
+                <button class="btn-block btn-success" onclick="lionBack()">Lion</button>
                 </div>
             </div>
         </div>
-
+    </div>
 
         <script src="assets/js/tw.js"></script>
 </body>

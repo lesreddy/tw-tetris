@@ -1,20 +1,95 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
+.row,
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Background Images */
+
 .butterfly {
-background: url('../images/butterflies.jpg'); /* The image used */  
-height: 100vh; /* You must set a specified height */
-background-position: center; /* Center the image */
-background-repeat: no-repeat; /* Do not repeat the image */
-background-size: cover; /* Resize the background image to cover the entire container */
+    background: url('../images/butterflies.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .macaw {
-    background: url('../images/macaw.jpg'); /* The image used */  
-    height: 100vh; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    }
+    background: url('../images/macaw.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.frog {
+    background: url('../images/frog.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.snake {
+    background: url('../images/snake.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shark {
+    background: url('../images/shark.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gorilla {
+    background: url('../images/gorilla.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.croc {
+    background: url('../images/crocodile.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tiger {
+    background: url('../images/tiger.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.elephant  {
+    background: url('../images/elephant.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lion {
+    background: url('../images/lion.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 
 .logo {
     font-family: "Permanent Marker", sans-serif;
@@ -40,16 +115,31 @@ background-size: cover; /* Resize the background image to cover the entire conta
     font-size: 1rem;
 }
 
-.narrower {
-    padding-top: 5px;
-}
-
-
 .label {
     font-family: permanent marker, sans-serif;
     color: yellow;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     border: 1px black;
+    background: grey;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.sub {
+    font-family: permanent marker, sans-serif;
+    color: #2cf;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border: 1px black;
+    font-size: 1.75rem;
+    text-align: center;
+    }
+
+.space {
+    margin-bottom: 10px;
+}
+
+.back {
     background: grey;
     border: 2px solid black;
     padding: 10px;
@@ -63,9 +153,4 @@ background-size: cover; /* Resize the background image to cover the entire conta
       font-size: 1.75rem;
     }
 
-@media (min-width: 540px) and (max-width: 1200px) {
-    .narrower {
-        padding-right: 75px;
-        padding-left: 75px;
-    }
-}
+

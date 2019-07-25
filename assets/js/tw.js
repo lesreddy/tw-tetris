@@ -239,10 +239,67 @@ function update(time = 0) {
 
 function updateScore() {
 	document.getElementById('score').innerText = player.score;
-	if (player.score += 500){
-		el.classList.remove("butterfly");
-		el.classList.add("macaw")
+	
+}
+
+function butterBack() {
+	el = document.getElementById("mainDiv");
+            el.classList.remove("macaw", "frog", "snake", "croc", "elephant", "gorilla", "lion", "shark", "tiger");
+            el.classList.add("butterfly");
+}
+
+function macawBack() {
+	el = document.getElementById("mainDiv");
+	el.classList.remove("butterfly", "frog", "snake", "croc", "elephant", "gorilla", "lion", "shark", "tiger");
+	el.classList.add("macaw");
 	}
+
+function frogBack() {
+	el = document.getElementById("mainDiv");
+	el.classList.remove("macaw","butterfly", "snake", "croc", "elephant", "gorilla", "lion", "shark", "tiger");
+	el.classList.add("frog");
+}
+
+function snakeBack() {
+		el = document.getElementById("mainDiv");
+		el.classList.remove("macaw", "frog", "butterfly", "croc", "elephant", "gorilla", "lion", "shark", "tiger");
+		el.classList.add("snake");
+}
+
+function sharkBack() {
+		el = document.getElementById("mainDiv");
+		el.classList.remove("macaw", "frog", "snake", "croc", "elephant", "gorilla", "lion", "butterfly", "tiger");
+		el.classList.add("shark");
+}
+
+function gorillaBack() {
+		el = document.getElementById("mainDiv");
+		el.classList.remove("macaw", "frog", "snake", "croc", "elephant", "butterfly", "lion", "shark", "tiger");
+		el.classList.add("gorilla");
+}
+
+function crocBack() {
+		el = document.getElementById("mainDiv");
+		el.classList.remove("macaw", "frog", "snake", "butterfly", "elephant", "gorilla", "lion", "shark", "tiger");
+		el.classList.add("croc");
+}
+
+function tigerBack() {
+	el = document.getElementById("mainDiv");
+	el.classList.remove("macaw", "frog", "snake", "crocodile", "elephant", "gorilla", "lion", "shark", "butterfly");
+	el.classList.add("tiger");
+}
+
+function elephantBack() {
+	el = document.getElementById("mainDiv");
+	el.classList.remove("macaw", "frog", "snake", "crocodile", "butterfly", "gorilla", "lion", "shark", "tiger");
+	el.classList.add("elephant");
+}
+
+function lionBack() {
+	el = document.getElementById("mainDiv");
+	el.classList.remove("macaw", "frog", "snake", "crocodile", "elephant", "gorilla", "butterfly", "shark", "tiger");
+	el.classList.add("lion");
 }
 
 const colors = [
@@ -286,3 +343,4 @@ document.addEventListener('keydown', event => {
 playerReset();
 updateScore();
 update();
+changeImage();

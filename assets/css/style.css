@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+#maindiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 /* Background Images */
 
@@ -92,12 +97,12 @@
 
 
 .logo {
-    font-family: "Permanent Marker", sans-serif;
     text-align: center;
     color: yellow;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "Permanent Marker", sans-serif;
     font-size: 2.5rem;
-}
+   }
 
 #tetris {
     display: block;
@@ -120,7 +125,7 @@
     color: yellow;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     border: 1px black;
-    background: grey;
+    background: rgb(255,255,255,0.6);
     border: 2px solid black;
     padding: 10px;
     border-radius: 25px;
@@ -128,11 +133,10 @@
 
 .sub {
     font-family: permanent marker, sans-serif;
-    color: #2cf;
+    color: #F23D3D;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     border: 1px black;
     font-size: 1.75rem;
-    text-align: center;
     }
 
 .space {
@@ -140,10 +144,31 @@
 }
 
 .back {
-    background: grey;
+    background: rgb(255,255,255,0.6);
     border: 2px solid black;
-    padding: 10px;
     border-radius: 25px;
+}
+
+.tweakheight {
+    position: relative;
+    height: 25%;
+    border-radius: 100px / 50px;
+}
+
+.height20 {
+    height: 35%;
+    position: relative;
+    bottom: -110px;
+}
+
+.height80 {
+    height: 100%;
+    position: absolute;
+
+}
+
+.wrapper {
+    background: grey ;
 }
 
 /* Media Queries */
@@ -153,4 +178,7 @@
       font-size: 1.75rem;
     }
 
+.pos {
+    bottom: -10px;
+}
 

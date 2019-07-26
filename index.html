@@ -12,40 +12,63 @@
 
 <body>
     <div id ="mainDiv" class="butterfly">
-        <nav class ="logo">
+        <nav>
+            <div class="logo">
             <p>Totally Wild Tetris</p>
+        </div>
         </nav>
-        <div class="container space">
+        <div class="container">
             <div class="row">
                 <div class="col-xl-6">
                     <canvas id="tetris" width="240" height="400"></canvas>
                 </div>
-                <div class="d-none d-xl-block col-xl-6 space">
-                    <div class="back space">
-                    <p class="sub">Choose Your Background</p>
-                    <div class="d-flex justify-content-around space">
-                    <button class="btn btn-success" onclick="butterBack()">Butterflies</button>
-                    <button class="btn btn-success" onclick="macawBack()">Macaw</button>
-                    <button class="btn btn-success" onclick="frogBack()">Frog</button>
-                    <button class="btn btn-success" onclick="snakeBack()">Snake</button>
-                    <button class="btn btn-success" onclick="gorillaBack()">Gorilla</button>
+                <div class="d-none d-xl-block col-xl-6">
+                    <div class="row back space justify-content-around">
+                        <div>
+                        <p class="sub">Choose Your Background</p>
+                        </div>
+                        <div class="col-6 justify-content-around space">
+                            <button class="btn-block btn-success" onclick="butterBack()">Butterflies</button>
+                            <button class="btn-block btn-success" onclick="macawBack()">Macaw</button>
+                            <button class="btn-block btn-success" onclick="frogBack()">Frog</button>
+                            <button class="btn-block btn-success" onclick="snakeBack()">Snake</button>
+                            <button class="btn-block btn-success" onclick="gorillaBack()">Gorilla</button>
+                        </div>
+                        <div class="col-6 justify-content-around space">
+                            <button class="btn-block btn-success" onclick="sharkBack()">Shark</button>
+                            <button class="btn-block btn-success" onclick="crocBack()">Crocodile</button>
+                            <button class="btn-block btn-success" onclick="tigerBack()">Tiger</button>
+                            <button class="btn-block btn-success" onclick="elephantBack()">Elephant</button>
+                            <button class="btn-block btn-success" onclick="lionBack()">Lion</button>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-around space">
-                    <button class="btn btn-success" onclick="sharkBack()">Shark</button>
-                    <button class="btn btn-success" onclick="crocBack()">Crocodile</button>
-                    <button class="btn btn-success" onclick="tigerBack()">Tiger</button>
-                    <button class="btn btn-success" onclick="elephantBack()">Elephant</button>
-                    <button class="btn btn-success" onclick="lionBack()">Lion</button>
-                </div>
-                
-                </div>
-                    <div class="sub back">Name
+                    <div class="space row sub back">     
+                        <div class="col-6">
+                            <p>Name:</p>
+                        </div>
+                        <div class="col-6">     
+                        </div>
                     </div>
+                    <div class="row space tweakheight justify-content-around">
+                        <div class="col-6 mr-auto back">
+                            <p class="sub">Score</p>
+                        </div>
+                        <div class="col-5 back height80">
+                            <p class="sub">Controls</p>
+                        </div>
+                    </div>
+                    <div class="row space tweakheight justify-content-around">
+                            <div class="col-6 mr-auto back">
+                                <p class="sub">Level</p>
+                            </div>
+                            <div class="col-5 back height20">
+                                <p class="sub">Time</p>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
-
-        <div class="container space offset-sm-2 col-sm-8 d-xl-none">
+        <div class="container offset-sm-2 col-sm-8 d-xl-none">
             <div class="container">
                 <div class="row">
                     <div class="label col-6">
@@ -69,6 +92,8 @@
                     </div>
                 </div>
                 </div>
+            </div>
+            <div class="container">
                 <div class="row">
                     <div class="label col-6">
                             <div class="row">
@@ -90,34 +115,34 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
-            </div>
-        
-        
         </div>
     </div>
-    <div>
-        <div class="container-fluid offset-sm-2 col-sm-8 d-xl-none space">
-            <div class="container back space">
-                <p class="row sub justify-content-center">Choose Your Background</p>
+    <div class="container-fluid offset-sm-2 col-sm-8 d-xl-none">
+            <div class="container">
+                <div class="row justify-content-center">
+                <p class="sub">Choose Your Background</p>
+                </div>
                 <div class="row">
-                <div class="col-6">
-                <button class="btn-block btn-success" onclick="butterBack()">Butterflies</button>
-                <button class="btn-block btn-success" onclick="macawBack()">Macaw</button>
-                <button class="btn-block btn-success" onclick="frogBack()">Frog</button>
-                <button class="btn-block btn-success" onclick="snakeBack()">Snake</button>
-                <button class="btn-block btn-success" onclick="gorillaBack()">Gorilla</button>
-                </div>
-                <div class="col-6">
-                <button class="btn-block btn-success" onclick="sharkBack()">Shark</button>
-                <button class="btn-block btn-success" onclick="crocBack()">Crocodile</button>
-                <button class="btn-block btn-success" onclick="tigerBack()">Tiger</button>
-                <button class="btn-block btn-success" onclick="elephantBack()">Elephant</button>
-                <button class="btn-block btn-success" onclick="lionBack()">Lion</button>
+                    <div class="col-6">
+                        <button class="btn-block btn-success" onclick="butterBack()">Butterflies</button>
+                        <button class="btn-block btn-success" onclick="macawBack()">Macaw</button>
+                        <button class="btn-block btn-success" onclick="frogBack()">Frog</button>
+                        <button class="btn-block btn-success" onclick="snakeBack()">Snake</button>
+                        <button class="btn-block btn-success" onclick="gorillaBack()">Gorilla</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn-block btn-success" onclick="sharkBack()">Shark</button>
+                        <button class="btn-block btn-success" onclick="crocBack()">Crocodile</button>
+                        <button class="btn-block btn-success" onclick="tigerBack()">Tiger</button>
+                        <button class="btn-block btn-success" onclick="elephantBack()">Elephant</button>
+                        <button class="btn-block btn-success" onclick="lionBack()">Lion</button>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
+    
 
         <script src="assets/js/tw.js"></script>
 </body>

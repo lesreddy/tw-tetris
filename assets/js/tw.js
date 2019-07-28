@@ -175,12 +175,21 @@ function playerReset() {
 		arena.forEach(row => row.fill(0));
 		player.score = 0;
 		updateScore();
-		Swal.fire(
-			'GAME OVER!',
-			'New Game?',
-			'success'
-		  );
-	}
+		Swal.fire({
+			title: 'GAME OVER',
+			text: "WOULD YOU LIKE TO START A NEW GAME?",
+			type: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Yes, New Game!'
+		  }).then((result) => {
+			if (result.value) {
+			  location.reload();
+			  
+			}
+		  });
+		}
 }
 
 /*below function implements the player rotate function so a piece can rotates

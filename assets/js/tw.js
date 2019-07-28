@@ -160,6 +160,10 @@ function playerMove(dir) {
 
 // Below function ensures that pieces are randomly selected.
 
+function gamePause() {
+
+}
+
 function playerReset() {
 	const pieces ='ILJOTSZ';
 	player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
@@ -171,6 +175,11 @@ function playerReset() {
 		arena.forEach(row => row.fill(0));
 		player.score = 0;
 		updateScore();
+		Swal.fire(
+			'GAME OVER!',
+			'New Game?',
+			'success'
+		  );
 	}
 }
 
@@ -343,4 +352,7 @@ document.addEventListener('keydown', event => {
 playerReset();
 updateScore();
 update();
-changeImage();
+
+
+
+

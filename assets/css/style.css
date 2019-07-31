@@ -137,7 +137,7 @@
 
 input {
     background: rgb(255,255,255,0.6);
-    padding: 3px:
+    padding: 3px;
 }
 
 #controls {
@@ -151,6 +151,14 @@ input {
     
 }
 
+.control {
+    height: 231px;
+}
+
+.stage {
+    height: 110px;
+}
+
 .back {
     background: rgb(255,255,255,0.6);
     border: 2px solid black;
@@ -158,8 +166,7 @@ input {
 }
 
 .tweakheight {
-    position: relative;
-    height: 25%;
+    
     border-radius: 100px / 50px;
 }
 
@@ -185,8 +192,4 @@ input {
     .logo {
       font-size: 1.75rem;
     }
-
-.pos {
-    bottom: -10px;
-}
 

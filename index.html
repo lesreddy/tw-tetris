@@ -27,15 +27,19 @@
                 <div class="d-none d-lg-block col-lg-6">
                     <div class="row back space justify-content-around">
                         <div class="text-center col-12">
-                        <p class="sub">Name:</p>
-                        <p class="sub" id="name"></p>
-                        </div>
-                        <div class="col-12 text-center justify-content-around space">
-                            <a class="btn-success" onclick="inputName()">Please Click to Enter Name and Begin</a>            
-                        </div>                
+                        <p class="sub">Name:  <span class="logo" id="name"></span></p>
+                        </div>             
+                    </div>
+                    <div class="row">
+                            <div class="col-6 space">
+                                <button class="btn-block btn-success" onclick="playerName()">Set Player Name</button>            
+                            </div> 
+                            <div class="col-6 space">
+                                    <button class="btn-block btn-success" onclick="resetGame()">Restart Game</button>
+                            </div>
                     </div>
                     
-                    <div class="row space tweakheight justify-content-around">
+                    <div class="row control space tweakheight justify-content-around">
                         <div class="col-6 mr-auto back text-center">
                             <p class="sub">Score</p>
                             <br>
@@ -61,6 +65,15 @@
                                 </ul>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row stage space tweakheight">
+                        <div class = "col-6 back mr-auto text-center">
+                        <p class="sub">Stage</p>
+                        <p class="sub" id="stage"></p>
+                        </div>
+                        <div class = "col-6 back mr-auto text-center">
+                        <p class="sub" id="time">Time</p>
                         </div>
                     </div>
                    
@@ -116,7 +129,7 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets\js\jquery-3.4.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootbox.min.js"></script>

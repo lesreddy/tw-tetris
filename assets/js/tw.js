@@ -22,17 +22,31 @@
   })();
 })();
 
-function inputName() {
-	var txt;
-  	var person = prompt("Please enter your name:", "Harry Potter");
-  	if (person == null || person == "") {
-    	txt = "User cancelled the prompt.";
-	  } else 
-	  {
-    	txt = "Hello " + person + "! How are you today?";
-  	}
-  	document.getElementById("demo").innerHTML = txt;
+function playerName(z){
+	var z = bootbox.prompt("PLEASE ENTER YOUR NAME", function display(z) {
+	  if (z != null) {
+		  document.getElementById("name").innerHTML = z;
+		  localStorage.playername = z;
+		  
+		  dis(z);
+	  }
+	  else
+		  document.getElementById("name").innerHTML = "";
+	});
 	}
+	function dis(arg) {
+	  bootbox.alert("Player name set to " + arg);
+	}
+	if(localStorage.playername === undefined) {
+	  document.getElementById("name").innerHTML = "Player 1";
+	} else {
+	  document.getElementById("name").innerHTML = localStorage.playername;
+	}
+  
+function resetGame(){
+	location.reload();
+}
+
 
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
@@ -293,24 +307,36 @@ function update(time = 0) {
 function updateScore() {
 	document.getElementById('score').innerText = player.score;
 	const bround = document.getElementById('mainDiv');
-	if (player.score >= 50 && player.score <= 99) {
+	const level = document.getElementById("stage");
+	if (player.score >=0 && player.score <= 499) {
+		level.innerText == "1";
+	} else if (player.score >= 500 && player.score <= 999) {
 		bround.style.backgroundImage = "url('../assets/images/frog.jpg')";
-	} else if (player.score >= 100 && player.score <= 149) {
+		level.innerText == "2";
+	} else if (player.score >= 1000 && player.score <= 1499) {
 		bround.style.backgroundImage = "url('../assets/images/macaw.jpg')";
-	} else if (player.score >= 150 && player.score <= 199) {
+		level.innerText == "3";
+	} else if (player.score >= 2000 && player.score <= 2499) {
 		bround.style.backgroundImage = "url('../assets/images/snake.jpg')";
-	} else if (player.score >= 200 && player.score <= 249) {
+		level.innerText == "4";
+	} else if (player.score >= 2500 && player.score <= 2999) {
 		bround.style.backgroundImage = "url('../assets/images/gorilla.jpg')";
-	} else if (player.score >= 250 && player.score <= 299) {
+		level.innerText == "5";
+	} else if (player.score >= 3000 && player.score <= 3499) {
 		bround.style.backgroundImage = "url('../assets/images/crocodile.jpg')";
-	} else if (player.score >= 300 && player.score <= 349) {
+		level.innerText == "6";
+	} else if (player.score >= 3500 && player.score <= 3999) {
 		bround.style.backgroundImage = "url('../assets/images/shark.jpg')";
-	} else if (player.score >= 350 && player.score <= 399) {
+		level.innerText == "7";
+	} else if (player.score >= 4000 && player.score <= 4499) {
 		bround.style.backgroundImage = "url('../assets/images/tiger.jpg')";
-	} else if (player.score >= 400 && player.score <= 449) {
+		level.innerText == '8';
+	} else if (player.score >= 4500 && player.score <= 4999) {
 		bround.style.backgroundImage = "url('../assets/images/elephant.jpg')";
-	} else if (player.score >= 450) {
+		level.innerText == '9';
+	} else if (player.score >= 5000) {
 		bround.style.backgroundImage = "url('../assets/images/lion.jpg')";
+		level.innerText == '10';
 	} 
 }
 

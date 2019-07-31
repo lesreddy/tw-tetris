@@ -1,16 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
-.row,
-.container {
-    margin: 0;
-    padding: 0;
-}
 
-#maindiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
+
 
 /* Background Images */
 
@@ -117,7 +109,7 @@
     font-family: "Permanent Marker", sans-serif;
     text-align: center;
     color: white;
-    font-size: 1rem;
+    font-size: 3rem;
 }
 
 .label {
@@ -141,6 +133,17 @@
 
 .space {
     margin-bottom: 10px;
+}
+
+#controls {
+    list-style: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "Permanent Marker", sans-serif;
+    
 }
 
 .back {

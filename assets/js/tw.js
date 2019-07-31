@@ -1,4 +1,28 @@
 
+(function () {
+  var angle = 0;
+  var p = document.querySelector('p');
+  var text = p.textContent.split('');
+  var len = text.length;
+  var phaseJump = 360 / len;
+  var spans;
+
+  p.innerHTML = text.map(function (char) {
+    return '<span>' + char + '</span>';
+  }).join('');
+
+  spans = p.children;
+
+  (function wheee () {
+    for (var i = 0; i < len; i++) {
+      spans[i].style.color = 'hsl(' + (angle + Math.floor(i * phaseJump)) + ', 55%, 70%)';
+    }
+    angle++;
+    requestAnimationFrame(wheee);
+  })();
+})();
+
+
 
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
@@ -176,10 +200,10 @@ function playerReset() {
 		player.score = 0;
 		updateScore();
 		Swal.fire({
-			title: 'GAME OVER',
+			title: 'GAME OVER!',
 			text: "WOULD YOU LIKE TO START A NEW GAME?",
 			type: 'warning',
-			showCancelButton: true,
+			showCancelButton: false,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',
 			confirmButtonText: 'Yes, New Game!'
@@ -255,10 +279,34 @@ function update(time = 0) {
 
 // below function creates a score for the game
 
+
+
 function updateScore() {
 	document.getElementById('score').innerText = player.score;
-	
+	const bround = document.getElementById('mainDiv');
+	if (player.score >= 50 && player.score <= 99) {
+		bround.style.backgroundImage = "url('../assets/images/frog.jpg')";
+	} else if (player.score >= 100 && player.score <= 149) {
+		bround.style.backgroundImage = "url('../assets/images/macaw.jpg')";
+	} else if (player.score >= 150 && player.score <= 199) {
+		bround.style.backgroundImage = "url('../assets/images/snake.jpg')";
+	} else if (player.score >= 200 && player.score <= 249) {
+		bround.style.backgroundImage = "url('../assets/images/gorilla.jpg')";
+	} else if (player.score >= 250 && player.score <= 299) {
+		bround.style.backgroundImage = "url('../assets/images/crocodile.jpg')";
+	} else if (player.score >= 300 && player.score <= 349) {
+		bround.style.backgroundImage = "url('../assets/images/shark.jpg')";
+	} else if (player.score >= 350 && player.score <= 399) {
+		bround.style.backgroundImage = "url('../assets/images/tiger.jpg')";
+	} else if (player.score >= 400 && player.score <= 449) {
+		bround.style.backgroundImage = "url('../assets/images/elephant.jpg')";
+	} else if (player.score >= 450) {
+		bround.style.backgroundImage = "url('../assets/images/lion.jpg')";
+	} 
 }
+
+
+
 
 function butterBack() {
 	el = document.getElementById("mainDiv");
@@ -345,15 +393,15 @@ without overriding existing event handlers so you can add many event
 handlers to one element */
 
 document.addEventListener('keydown', event => {
-	if (event.keyCode === 37) {
+	if (event.keyCode === 74) {
 		playerMove(-1);
-	}  else if (event.keyCode === 39) {
+	}  else if (event.keyCode === 76) {
 		playerMove(1);
-	} else if (event.keyCode === 40) {
+	} else if (event.keyCode === 75) {
 	playerDrop();
-	} else if (event.keyCode === 38) {
-		playerRotate(-1);
 	} else if (event.keyCode === 87) {
+		playerRotate(-1);
+	} else if (event.keyCode === 81) {
 		playerRotate(1);
 	}
 });

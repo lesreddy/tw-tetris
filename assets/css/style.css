@@ -108,7 +108,7 @@
 #score {
     font-family: "Permanent Marker", sans-serif;
     text-align: center;
-    color: white;
+    color: yellow;
     font-size: 3rem;
 }
 
@@ -133,6 +133,11 @@
 
 .space {
     margin-bottom: 10px;
+}
+
+input {
+    background: rgb(255,255,255,0.6);
+    padding: 3px:
 }
 
 #controls {

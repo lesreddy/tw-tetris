@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://lesreddy.github.io/tw-tetris/" target="_blank"><img src="hhttps://ibb.co/Fs5ZRhJ" alt="TW Tetris main screen"/></a>
+  <a href="https://lesreddy.github.io/tw-tetris/" target="_blank"><img src="https://i.ibb.co/gvSqkrw/totallywildtetris.png" alt="TW Tetris main screen"/></a>
 </h1>
 
 

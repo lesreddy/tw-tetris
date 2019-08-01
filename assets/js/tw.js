@@ -1,7 +1,9 @@
 
 
 
-
+/**
+ * Changes the Title 'Totally Wild Tetris' to a rainbow colour style
+ */
 (function () {
   var angle = 0;
   var p = document.querySelector('p');
@@ -25,7 +27,10 @@
   })();
 })();
 
-function playerName(z){
+/**
+ * sets the player username for the game - uses bootbox
+ */
+function playerName(){
 	var z = bootbox.prompt("PLEASE ENTER YOUR NAME", function display(z) {
 	  if (z != null) {
 		  document.getElementById("name").innerHTML = z;
@@ -45,22 +50,25 @@ function playerName(z){
 	} else {
 	  document.getElementById("name").innerHTML = localStorage.playername;
 	}
-  
+/**
+ * Resets the game
+ */ 
 function resetGame(){
 	location.reload();
 }
 
+/**
+ * Sets up the Canvas
+ */
 var canvas = document.getElementById('tetris');
-
-
 const context = canvas.getContext('2d');
-
 context.scale(20,20);
 
-/* arenaSweep function creates the line remove
-component of the game, ie when a complete line is formed
-with the random pieces it should be removed from the arena */
-
+/**
+* Creates the line remove
+* component of the game, ie when a complete line is formed
+* with the random pieces it should be removed from the arena
+ */
 function arenaSweep() {
 	let rowCount = 1;
 	outer: for (let y = arena.length -1; y > 0; --y) {
@@ -81,9 +89,10 @@ function arenaSweep() {
 
 
 
-/* This function will allow the pieces to stay within
- the canvas when moving pieces come down or are moved side to side */
 
+/**
+ * Allows the pieces to stay within
+ * the canvas when moving pieces come down or are moved side to side */ 
 function collide(arena, player) {
 	const [m, o] = [player.matrix, player.pos];
 	for (let y = 0; y < m.length; ++y) {
@@ -97,7 +106,9 @@ function collide(arena, player) {
 	}
 	return false;
 }
-
+/**
+ * Creates the matrix for the pieces to be placed on. 
+ */
 function createMatrix(w, h) {
 	const matrix = [];
 	while (h--) {
@@ -106,6 +117,9 @@ function createMatrix(w, h) {
 	return matrix;
 }
 
+/**
+ * creates each playing piec 
+ */
 function createPiece(type) {
 	if (type === 'T') {
 		return [
@@ -152,18 +166,20 @@ function createPiece(type) {
 	}
 }
 
+/**
+ *Draws the piece onto the playing arena
+ */
 function draw() {
 	context.fillStyle = 'rgba(0,0,0, 1)';
 	context.fillRect(0,0, canvas.width, canvas.height);
-
-//below methoed draws the shape on the arena
 
 	drawMatrix(arena, {x: 0, y: 0});
 	drawMatrix(player.matrix, player.pos);
 }
 
-// Below function clears the canvas so that it can re-draw the shape
-
+/**
+ * Clears the canvas so that it can re-draw the shape
+ */
 function drawMatrix(matrix, offset) {
 	matrix.forEach((row, y) => {
 		row.forEach((value, x) => {
@@ -177,8 +193,9 @@ function drawMatrix(matrix, offset) {
 	})
 }
 
-//The below function will copy all the values from the player into the arena
-
+/**
+ * Copies all the values from the player into the arena 
+ */
 function merge(arena, player) {
 	player.matrix.forEach((row, y) => {
 		row.forEach((value, x) => {
@@ -201,8 +218,9 @@ function playerDrop() {
 	dropCounter = 0;
 }
 
-//Below function ensures the pieces collides with the edge of arena and other pieces
-
+/**
+ * Ensures the pieces collide with the edge of arena and other pieces 
+ *  */
 function playerMove(dir) {
 	player.pos.x += dir;
 	if (collide(arena, player)) {
@@ -210,16 +228,17 @@ function playerMove(dir) {
 	}
 }
 
-// Below function ensures that pieces are randomly selected.
-
-
+/**
+ * Ensures that pieces are randomly selected and that the game resets when pieces reach the top.
+ * Also calls the game over modal
+ */
 function playerReset() {
 	const pieces ='ILJOTSZ';
 	player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
 	player.pos.y = 0;
 	player.pos.x = (arena[0].length / 2 | 0) -
 				   (player.matrix[0].length / 2 | 0);
-	// below method will ensure the game resets when pieces reach the top
+	// below method 
 	 if (collide(arena, player)) {
 		arena.forEach(row => row.fill(0));
 		player.score = 0;
@@ -241,9 +260,10 @@ function playerReset() {
 		}
 }
 
-/*below function implements the player rotate function so a piece can rotates
-but importantly makes it stay in the playing arena*/
-
+/** 
+ * Implements the player rotate function so a piece can rotates
+but importantly makes it stay in the playing arena
+*/
 function playerRotate(dir) {
 	const pos = player.pos.x;
 	let offset = 1;
@@ -260,8 +280,10 @@ function playerRotate(dir) {
 }
 
 
-//below function switches the pieces position by rotating the matrix
 
+/**
+ * below function switches the pieces position by rotating the matrix} matrix 
+ */
 function rotate(matrix, dir) {
 	for (let y = 0; y < matrix.length; ++y) {
 		for (let x = 0; x < y; ++x) {
@@ -285,6 +307,8 @@ let dropCounter = 0;
 let dropInterval = 1000;
 
 let lastTime = 0;
+
+
 function update(time = 0) {
 	const deltaTime = time - lastTime;
 	lastTime = time;
@@ -292,20 +316,11 @@ function update(time = 0) {
 	dropCounter += deltaTime;
 	if (dropCounter > dropInterval) {
 		playerDrop();
-}
-/* The requestAnimationFrame method is used for the following reasons:
- 1. Browser can optimize it, so animations will be smoother
- 2. Animations in inactive tabs will stop, allowing the CPU to pause and reset
- 3. Battery-friendly */	
+}	
 	draw();
 	requestAnimationFrame(update);
 
 }
-
-
-
-// below function creates a score for the game
-
 
 /**
  * This function updates the score
@@ -366,10 +381,11 @@ const player = {
 	score: 0,
 }
 
-/* addEventLister method attaches an event handler to the specified element
-without overriding existing event handlers so you can add many event
-handlers to one element */
 
+/**
+ * Creates the controls for the game by assigning the keys
+ * includes move left, move right, drop down, rotate left and right.
+ */
 document.addEventListener('keydown', event => {
 	if (event.keyCode === 74) {
 		playerMove(-1);

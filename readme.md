@@ -99,7 +99,6 @@ The following technologies were used to construct the site:
 
 ### Content
  
-
 ### Media
 
 Images were taken from [Pexels](https://www.pexels.com/).  

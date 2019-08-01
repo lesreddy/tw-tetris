@@ -15,7 +15,7 @@ Features include 10 levels, a realtime score, level and time update all designed
 
 ## Table of Contents
 1. [**UX**](#ux)
-    - [Goals**](#goals)
+    - [**Goals**](#goals)
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
     - [**Wireframes**](#wireframes)

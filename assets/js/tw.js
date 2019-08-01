@@ -1,4 +1,7 @@
 
+
+
+
 (function () {
   var angle = 0;
   var p = document.querySelector('p');
@@ -47,8 +50,9 @@ function resetGame(){
 	location.reload();
 }
 
+var canvas = document.getElementById('tetris');
 
-const canvas = document.getElementById('tetris');
+
 const context = canvas.getContext('2d');
 
 context.scale(20,20);
@@ -303,40 +307,42 @@ function update(time = 0) {
 // below function creates a score for the game
 
 
-
+/**
+ * This function updates the score
+ */
 function updateScore() {
 	document.getElementById('score').innerText = player.score;
 	const bround = document.getElementById('mainDiv');
 	const level = document.getElementById("stage");
 	if (player.score >=0 && player.score <= 499) {
-		level.innerText == "1";
+		level.innerText = "1";
 	} else if (player.score >= 500 && player.score <= 999) {
 		bround.style.backgroundImage = "url('../assets/images/frog.jpg')";
-		level.innerText == "2";
+		level.innerText = "2";
 	} else if (player.score >= 1000 && player.score <= 1499) {
 		bround.style.backgroundImage = "url('../assets/images/macaw.jpg')";
-		level.innerText == "3";
+		level.innerText = "3";
 	} else if (player.score >= 2000 && player.score <= 2499) {
 		bround.style.backgroundImage = "url('../assets/images/snake.jpg')";
-		level.innerText == "4";
+		level.innerText = "4";
 	} else if (player.score >= 2500 && player.score <= 2999) {
 		bround.style.backgroundImage = "url('../assets/images/gorilla.jpg')";
-		level.innerText == "5";
+		level.innerText = "5";
 	} else if (player.score >= 3000 && player.score <= 3499) {
 		bround.style.backgroundImage = "url('../assets/images/crocodile.jpg')";
-		level.innerText == "6";
+		level.innerText = "6";
 	} else if (player.score >= 3500 && player.score <= 3999) {
 		bround.style.backgroundImage = "url('../assets/images/shark.jpg')";
-		level.innerText == "7";
+		level.innerText = "7";
 	} else if (player.score >= 4000 && player.score <= 4499) {
 		bround.style.backgroundImage = "url('../assets/images/tiger.jpg')";
-		level.innerText == '8';
+		level.innerText = '8';
 	} else if (player.score >= 4500 && player.score <= 4999) {
 		bround.style.backgroundImage = "url('../assets/images/elephant.jpg')";
-		level.innerText == '9';
+		level.innerText = '9';
 	} else if (player.score >= 5000) {
 		bround.style.backgroundImage = "url('../assets/images/lion.jpg')";
-		level.innerText == '10';
+		level.innerText = '10';
 	} 
 }
 

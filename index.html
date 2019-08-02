@@ -2,52 +2,94 @@
 <html lang="en">
 
 <head>
+    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Style Sheets -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets\css\style.css">
+    
+    <!-- Favicon Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
     
-
+    <!-- Page title -->
     <title>Totally Wild Tetris</title>
 </head>
 
 <body>
     <div id ="mainDiv" class="butterfly">
-        <nav>
-            <div class="logo">
-            <p>Totally Wild Tetris</p>
-        </div>
-        </nav>
+        <!-- main logo -->
+        <header>
+            <div>
+            <p id="mainlogo">Totally Wild Tetris</p>
+            </div>
+        </header>
+        <!-- game section -->
         <div class="container">
             <div class="row">
+                <!-- tetris canvas -->
                 <div class="col-lg-6">
                     <canvas id="tetris" width="240" height="400"></canvas>
                 </div>
-                <div class="d-none d-lg-block col-lg-6">
-                    <div class="row back space justify-content-around">
-                        <div class="text-center col-12">
-                        <p class="sub">Name:  <span class="logo" id="name"></span></p>
+                <!-- user info screen -->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <!-- player name  -->
+                        <div class="col-6">
+                            <div class="back row">
+                                <div class="col-6">
+                                <p class="sub">Name:</p>
+                                </div>
+                                <div class="col-6">
+                                <p class="logo" id="name"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- player score -->
+                        <div class="back col-6">
+                            <div class="row">
+                                <div class="col-6">
+                                <p class="sub">Score:</p>
+                                </div>
+                                <div class="col-6">
+                                <p class="logo" id="score"></p>
+                                </div>
+                            </div>  
                         </div>             
                     </div>
-                    <div class="row">
-                            <div class="col-6 space">
-                                <button id="playername" class="btn-block btn-success">Set Player Name</button>            
-                            </div> 
-                            <div class="col-6 space">
-                                    <button id="gamerestart" class="btn-block btn-success">Restart Game</button>
-                            </div>
-                    </div>
+
                     
-                    <div class="row control space tweakheight justify-content-around">
-                        <div class="col-6 mr-auto back text-center">
-                            <p class="sub">Score</p>
-                            
-                            <h1 class="sub" id ="score"></h1>
-                        </div>
-                        <div class="col-6 back">
+                    <div class="row">
+                        <!-- level reached -->
+                        <div class="col-6">
+                            <div class="back row">
+                                <div class="col-6">
+                                <p class="sub">Stage:</p>
+                                </div>
+                                <div class="col-6">
+                                <p class="logo" id="stage"></p>
+                                </div>
+                            </div>
+                        </div>                  
+                        <!-- level time -->
+                        <div class="col-6">
+                            <div class="back row">
+                                <div class="col-6">
+                                <p class="sub">Stage:</p>
+                                </div>
+                                <div class="col-6">
+                                <p class="logo" id="time"></p>
+                                </div>
+                            </div>
+                        </div>                         
+                    </div>
+
+                    <!-- player controls -->
+                    <div class="row">
+                        <div class="offset-3 col-6 back">
                             <p class="sub space text-center">Controls</p>
                             <div class="row">
                                 <div class="col-6"
@@ -69,65 +111,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row stage space tweakheight">
-                        <div class = "col-6 back mr-auto text-center">
-                        <p class="sub">Stage</p>
-                        <p class="sub" id="stage"></p>
-                        </div>
-                        <div class = "col-6 back mr-auto text-center">
-                        <p class="sub" id="time">Time</p>
-                        </div>
+
+                    
+                    <!-- Buttons -->
+                    <div class="row">
+                            <!-- set player name button -->
+                            <div class="col-6 space">
+                                <button id="playername" class="btn-block btn-success">Set Player Name</button>            
+                            </div>
+                             <!-- restart game button  -->
+                            <div class="col-6 space">
+                                    <button id="gamerestart" class="btn-block btn-success">Restart Game</button>
+                            </div>
                     </div>
                    
                 </div>
             </div>
         </div>
     </div>
-    <div class="container offset-sm-2 col-sm-8 d-lg-none">
-            <div class="container">
-                <div class="row">
-                    <div class="label col-6">
-                        <div class="key">
-                            NAME:
-                        </div>       
-                    </div>
-                <div class="label col-6">
-                    <div class="row">
-                        <div class="key col-6">
-                            SCORE:
-                        </div>
-                        <div class="key col-6">
-                            <span id="score"></span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="label col-6">
-                            <div class="row">
-                                <div class="key col-6">
-                                    TIME:
-                                </div>
-                                <div class="key col-6">
-                                    <span id=""></span>
-                                </div>
-                            </div>
-                        </div>
-                <div class="label col-6">
-                    <div class="row">
-                        <div class="key col-6">
-                            LEVEL:
-                        </div>
-                        <div class="key col-6">
-                            <span id="score"></span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
+    
     <script src="assets\js\jquery-3.4.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
 
-
+#mainlogo {
+    text-align: center;
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 2.75rem;
+    margin-bottom: 0;
+}
 
 /* Background Images */
 
@@ -92,7 +99,7 @@
     color: yellow;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: "Permanent Marker", sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
    }
 
 #tetris {
@@ -103,13 +110,6 @@
     height: 75vh;
     opacity: 0.75;
     }
-
-#score {
-    font-family: "Permanent Marker", sans-serif;
-    text-align: center;
-    color: yellow;
-    font-size: 3rem;
-}
 
 .label {
     font-family: permanent marker, sans-serif;
@@ -150,13 +150,6 @@ input {
     
 }
 
-.control {
-    height: 231px;
-}
-
-.stage {
-    height: 110px;
-}
 
 .back {
     background: rgb(255,255,255,0.6);
@@ -164,8 +157,7 @@ input {
     border-radius: 25px;
 }
 
-.tweakheight {
-    
+.tweakheight {  
     border-radius: 100px / 50px;
 }
 

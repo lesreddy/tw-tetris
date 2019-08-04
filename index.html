@@ -10,21 +10,21 @@
     <!-- Style Sheets -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets\css\style.css">
-    
+
     <!-- Favicon Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    
+
     <!-- Page title -->
     <title>Totally Wild Tetris</title>
 </head>
 
 <body>
-    <div id ="mainDiv" class="butterfly">
+    <div id="mainDiv" class="butterfly">
         <!-- main logo -->
         <header>
             <div>
-            <p id="mainlogo">Totally Wild Tetris</p>
+                <p id="mainlogo">Totally Wild Tetris</p>
             </div>
         </header>
         <!-- game section -->
@@ -41,10 +41,10 @@
                         <div class="col-6">
                             <div class="back row">
                                 <div class="col-6">
-                                <p class="sub">Name:</p>
+                                    <p class="sub">Name:</p>
                                 </div>
                                 <div class="col-6">
-                                <p class="logo" id="name"></p>
+                                    <p class="logo" id="name"></p>
                                 </div>
                             </div>
                         </div>
@@ -52,39 +52,39 @@
                         <div class="back col-6">
                             <div class="row">
                                 <div class="col-6">
-                                <p class="sub">Score:</p>
+                                    <p class="sub">Score:</p>
                                 </div>
                                 <div class="col-6">
-                                <p class="logo" id="score"></p>
+                                    <p class="logo" id="score"></p>
                                 </div>
-                            </div>  
-                        </div>             
+                            </div>
+                        </div>
                     </div>
 
-                    
+
                     <div class="row">
                         <!-- level reached -->
                         <div class="col-6">
                             <div class="back row">
                                 <div class="col-6">
-                                <p class="sub">Stage:</p>
+                                    <p class="sub">Stage:</p>
                                 </div>
                                 <div class="col-6">
-                                <p class="logo" id="stage"></p>
+                                    <p class="logo" id="stage"></p>
                                 </div>
                             </div>
-                        </div>                  
+                        </div>
                         <!-- level time -->
                         <div class="col-6">
                             <div class="back row">
                                 <div class="col-6">
-                                <p class="sub">Stage:</p>
+                                    <p class="sub">Stage:</p>
                                 </div>
                                 <div class="col-6">
-                                <p class="logo" id="time"></p>
+                                    <p class="logo" id="time"></p>
                                 </div>
                             </div>
-                        </div>                         
+                        </div>
                     </div>
 
                     <!-- player controls -->
@@ -92,44 +92,61 @@
                         <div class="offset-3 col-6 back">
                             <p class="sub space text-center">Controls</p>
                             <div class="row">
-                                <div class="col-6"
-                                <ul class="text-left" id="controls">
+                                <div class="col-6" <ul class="text-left" id="controls">
                                     <li class="space">Left</li>
                                     <li class="space">Right</li>
                                     <li class="space">Down</li>
                                     <li class="space">Rotate</li>
-                                </ul>
+                                    </ul>
                                 </div>
                                 <div class="col-6">
-                                <ul  class="text-right" id="controls">
-                                    <li class="space">J</li>
-                                    <li class="space">L</li>
-                                    <li class="space">K</li>
-                                    <li class="space">Q or W</li>
-                                </ul>
+                                    <ul class="text-right" id="controls">
+                                        <li class="space">J</li>
+                                        <li class="space">L</li>
+                                        <li class="space">K</li>
+                                        <li class="space">Q or W</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+
                     <!-- Buttons -->
                     <div class="row">
-                            <!-- set player name button -->
-                            <div class="col-6 space">
-                                <button id="playername" class="btn-block btn-success">Set Player Name</button>            
-                            </div>
-                             <!-- restart game button  -->
-                            <div class="col-6 space">
-                                    <button id="gamerestart" class="btn-block btn-success">Restart Game</button>
-                            </div>
+                        <!-- set player name button -->
+                        <div class="col-6 space">
+                            <button id="playername" class="btn-block btn-success">Set Player Name</button>
+                        </div>
+                        <!-- restart game button  -->
+                        <div class="col-6 space">
+                            <button id="gamerestart" class="btn-block btn-success">Restart Game</button>
+                        </div>
                     </div>
-                   
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Finish Game Modal -->
+        <div class="modal fade" id="finishGameModal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">                   
+                    <div class="modal-body text-center modal-line">
+                        <h5 class="modal-title col-12 logo" id="exampleModalCenterTitle">Game Over!</h5>
+                        <p class="red-text">Congratulations you reached Buttefly (level 1)</p>
+                        <p class="logo">Fun Fact:</p>
+                        <p class="green-text">A butterfly's lifecycle is made up of four parts, egg, larva (caterpillars), pupa (chrysalis) and adult. Butterflies attach their eggs to leaves with a special glue.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">New Game</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script src="assets\js\jquery-3.4.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

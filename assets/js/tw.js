@@ -245,20 +245,7 @@ function playerReset() {
 		arena.forEach(row => row.fill(0));
 		player.score = 0;
 		updateScore();
-		Swal.fire({
-			title: 'GAME OVER!',
-			text: "WOULD YOU LIKE TO START A NEW GAME?",
-			type: 'warning',
-			showCancelButton: false,
-			confirmButtonColor: '#3085d6',
-			cancelButtonColor: '#d33',
-			confirmButtonText: 'Yes, New Game!'
-		  }).then((result) => {
-			if (result.value) {
-			  location.reload();
-			  
-			}
-		  });
+		$('#finishGameModal').modal('show');
 		}
 }
 

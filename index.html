@@ -40,11 +40,11 @@
                         <!-- player name  -->
                         <div class="col-6">
                             <div class="back row">
-                                <div class="col-6">
+                                <div class="col-4">
                                     <p class="sub">Name:</p>
                                 </div>
-                                <div class="col-6">
-                                    <p class="main-key-values" id="name"></p>
+                                <div class="col-8 text-center">
+                                    <p class="pt-2 main-key-values" id="name"></p>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                     <p class="sub">Score:</p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="main-key-values" id="score"></p>
+                                    <p class="pt-2 main-key-values" id="score"></p>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     <p class="sub">Stage:</p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="main-key-values" id="stage"></p>
+                                    <p class="pt-2 main-key-values" id="stage"></p>
                                 </div>
                             </div>
                         </div>
@@ -80,23 +80,24 @@
                                 <div class="col-6">
                                     <p class="sub">Time:</p>
                                 </div>
-                                <div class="col-6">
-                                    <p class="main-key-values" id="time"></p>
+                                <div class="col-6 p-0">
+                                    <p class="pt-3 main-key-values" id="time"></p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- player controls -->
-                    <div class="row">
-                        <div class="offset-3 col-6 back">
+                    <div id="control-background" class="row">
+                        <div  class="col-12 offset-lg-3 col-lg-6">
                             <p class="sub space text-center">Controls</p>
                             <div class="row">
-                                <div class="col-6" <ul class="text-left" id="controls">
-                                    <li class="space">Left</li>
-                                    <li class="space">Right</li>
-                                    <li class="space">Down</li>
-                                    <li class="space">Rotate</li>
+                                <div class="col-6">
+                                    <ul class="p-0" id="controls">
+                                        <li class="space">Left</li>
+                                        <li class="space">Right</li>
+                                        <li class="space">Down</li>
+                                        <li class="space">Rotate</li>
                                     </ul>
                                 </div>
                                 <div class="col-6">
@@ -116,7 +117,7 @@
                     <div class="row">
                         <!-- set player name button -->
                         <div class="col-6 space">
-                            <button id="playername" class="btn-block btn-success">Set Player Name</button>
+                            <button id="playername" class="btn-block btn-success">Player Name</button>
                         </div>
                         <!-- restart game button  -->
                         <div class="col-6 space">

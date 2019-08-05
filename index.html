@@ -88,9 +88,9 @@
                     </div>
 
                     <!-- player controls -->
-                    <div id="control-background" class="row">
-                        <div  class="col-12 offset-lg-3 col-lg-6">
-                            <p class="sub space text-center">Controls</p>
+                    <div class="d-none d-lg-block row">
+                        <div id="control-background" class="col-12 col-lg-6 offset-lg-3">
+                            <p id="control-title" class="space text-center">Controls</p>
                             <div class="row">
                                 <div class="col-6">
                                     <ul class="p-0" id="controls">
@@ -116,11 +116,11 @@
                     <!-- Buttons -->
                     <div class="row">
                         <!-- set player name button -->
-                        <div class="col-6 space">
+                        <div class="d-lg-block col-lg-6 space">
                             <button id="playername" class="btn-block btn-success">Player Name</button>
                         </div>
                         <!-- restart game button  -->
-                        <div class="col-6 space">
+                        <div class="d-lg-block col-lg-6 space">
                             <button id="gamerestart" class="btn-block btn-success">Restart Game</button>
                         </div>
                     </div>
@@ -128,15 +128,19 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Finish Game Modal -->
-        <div class="modal fade" id="finishGameModal" tabindex="-1" role="dialog"
+
+
+
+    <!-- Finish Game Modal -->
+    <div class="modal fade" id="finishGameModal" tabindex="-1" role="dialog"
             aria-labelledby="finishGameModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">                   
                     <div class="modal-body text-center modal-line">
                         <h5 class="modal-title col-12 logo" id="exampleModalCenterTitle">Game Over!</h5>
-                        <p class="red-text">Congratulations you reached Buttefly (level 1)</p>
+                        <p class="red-text">Congratulations you reached Butterfly (level 1)</p>
                         <p class="logo">Fun Fact:</p>
                         <p id ="fun-fact" class="green-text">A butterfly's lifecycle is made up of four parts, egg, larva (caterpillars), pupa (chrysalis) and adult. Butterflies attach their eggs to leaves with a special glue.</p>                  
                         <button type="button" id="newGame" class="btn btn-success" data-dismiss="modal">New Game</button>
@@ -144,7 +148,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 
     <script src="assets\js\jquery-3.4.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>

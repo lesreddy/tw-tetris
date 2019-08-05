@@ -50,11 +50,34 @@ Features include 10 levels, a realtime score, level and time update all designed
 
 ### Goals
 
+The primary purpose was to build a game with as much Javascript as possible to expediate the developers (a beginner) learning of it.
+
 ### User Stories
+
+1. The game to look as much like a real tetris game as possible.
+
+2.  Ensure that there was a bulk of it made with pure Javascript.
+
+3.  Easy to use with clear menus and instructions.
+
+4.  Small fun learning component to it.
+
+5.  Bright and colourful to resonate and reiterate the fun nature of the game.
+
+6.  Appropriate background music that can be switched on and off.
 
 ### Design
 
+**Fonts**
+
+Primary font chosen was **Permanent Marker** to give a jungle feel to the game and ensure a fun theme is created.
+
+Secondary font was **Varela** which contrasts well with the primary choice of font but also allows a clearer 
+
 ### Wireframes
+
+[Figma](https://www.figma.com/file/JQ5LJHzOdLoZvROewrwEzDgW/Totally-Wild-Tetris?node-id=14%3A76) was used to create the wireframes. 
+
 
 ## Features
 

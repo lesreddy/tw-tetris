@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Varela&display=swap');
+
 
 #mainlogo {
     text-align: center;
@@ -9,6 +11,10 @@
     font-size: 2.75rem;
     margin-bottom: 0;
 }
+
+
+
+
 
 /* Background Images */
 
@@ -98,6 +104,7 @@
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: "Permanent Marker", sans-serif;
     font-size: 1.5rem;
+
    }
 
 #tetris {
@@ -128,6 +135,29 @@
     font-size: 1.75rem;
     }
 
+
+
+
+.main-key-values {
+    font-family:  'Varela', sans-serif;
+    color: #ffff00;
+    font-weight: 700;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 1rem;
+    text-transform: uppercase;
+}    
+
+/* Button styles */
+
+.btn-success {
+    font-family:  'Varela', sans-serif;
+    border-radius: 25px;
+    color: #ffff00;
+    font-weight: 700;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: #28a745;
+}
+
 .space {
     margin-bottom: 10px;
 }
@@ -142,9 +172,11 @@ input {
     font-size: 15px;
     text-transform: uppercase;
     padding-bottom: 10px;
-    color: yellow;
+    color: #ffff00;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-family: "Permanent Marker", sans-serif;
+    font-family: 'Varela', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
     
 }
 
@@ -197,6 +229,17 @@ input {
     font-family: "Permanent Marker", sans-serif;
     font-size: 1.5rem;
 
+}
+
+.modal-backdrop {
+    background-color: black;
+ }
+
+ .modal-content  {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 25px; 
+    background:  rgb(255,255,255,0.9);
 }
 
 

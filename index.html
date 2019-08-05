@@ -44,7 +44,7 @@
                                     <p class="sub">Name:</p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="logo" id="name"></p>
+                                    <p class="main-key-values" id="name"></p>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                     <p class="sub">Score:</p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="logo" id="score"></p>
+                                    <p class="main-key-values" id="score"></p>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     <p class="sub">Stage:</p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="logo" id="stage"></p>
+                                    <p class="main-key-values" id="stage"></p>
                                 </div>
                             </div>
                         </div>
@@ -78,10 +78,10 @@
                         <div class="col-6">
                             <div class="back row">
                                 <div class="col-6">
-                                    <p class="sub">Stage:</p>
+                                    <p class="sub">Time:</p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="logo" id="time"></p>
+                                    <p class="main-key-values" id="time"></p>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                                         <li class="space">J</li>
                                         <li class="space">L</li>
                                         <li class="space">K</li>
-                                        <li class="space">Q or W</li>
+                                        <li class="space">Q/W</li>
                                     </ul>
                                 </div>
                             </div>
@@ -130,17 +130,15 @@
 
         <!-- Finish Game Modal -->
         <div class="modal fade" id="finishGameModal" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            aria-labelledby="finishGameModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">                   
                     <div class="modal-body text-center modal-line">
                         <h5 class="modal-title col-12 logo" id="exampleModalCenterTitle">Game Over!</h5>
                         <p class="red-text">Congratulations you reached Buttefly (level 1)</p>
                         <p class="logo">Fun Fact:</p>
-                        <p class="green-text">A butterfly's lifecycle is made up of four parts, egg, larva (caterpillars), pupa (chrysalis) and adult. Butterflies attach their eggs to leaves with a special glue.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-dismiss="modal">New Game</button>
+                        <p id ="fun-fact" class="green-text">A butterfly's lifecycle is made up of four parts, egg, larva (caterpillars), pupa (chrysalis) and adult. Butterflies attach their eggs to leaves with a special glue.</p>                  
+                        <button type="button" id="newGame" class="btn btn-success" data-dismiss="modal">New Game</button>
                     </div>
                 </div>
             </div>

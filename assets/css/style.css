@@ -187,10 +187,9 @@
     }
 
 
-#control-background {
-    background: rgb(255,255,255,0.8);
-    border: 2px solid black;
-    border-radius: 25px;
+.control-background {
+    border-radius: 0px;
+    background: #393f4d;
 }
 
 .tweakheight {  
@@ -268,11 +267,17 @@
     }
 }
  
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 1024px) {
     #control-background {
         border: none;
         border-top: 2px solid black;
         border-radius: 0px;
         background: white;
+    }
+} */
+
+@media (min-width: 1024px) {
+    #mainDiv {
+        height: 80vh;
     }
 }

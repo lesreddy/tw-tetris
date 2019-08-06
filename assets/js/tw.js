@@ -2,7 +2,7 @@
 
 
 /**
- * Changes the Title 'Totally Wild Tetris' to a rainbow colour style
+ * Changes the Title 'Totally Wild Tetris' main logo to a rainbow colour style
  */
 (function () {
   var angle = 0;

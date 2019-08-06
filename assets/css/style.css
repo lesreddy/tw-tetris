@@ -62,6 +62,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .macaw {
@@ -70,6 +71,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .frog {
@@ -78,6 +80,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .snake {
@@ -86,6 +89,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .shark {
@@ -94,6 +98,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .gorilla {
@@ -102,6 +107,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .croc {
@@ -110,6 +116,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .tiger {
@@ -118,6 +125,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .elephant  {
@@ -126,6 +134,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .lion {
@@ -134,6 +143,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 #tetris {

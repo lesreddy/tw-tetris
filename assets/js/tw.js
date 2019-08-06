@@ -324,7 +324,7 @@ function update(time = 0) {
 }
 
 /**
- * This function updates the score
+ * This function updates the score and changes the background image when the score increments by 500 points
  */
 function updateScore() {
 	document.getElementById('score').innerText = player.score;

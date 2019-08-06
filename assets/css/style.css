@@ -242,11 +242,20 @@
 
 /* Media Queries */
 
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 411px) {
     #mainlogo {
-        font-size: 31px;
+        font-size: 26px;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    #mainlogo {
+        font-size: 4.5rem;
+    }
+ }
+    
+
+@media screen and (max-width: 992px) {
     .main-key-values {
         font-size: 12px;
     }

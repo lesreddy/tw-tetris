@@ -143,6 +143,7 @@
     border: solid.2em #fff;
     height: 75vh;
     opacity: 0.75;
+    margin-bottom: 10px;
     }
 
 
@@ -232,6 +233,12 @@
     background:  rgb(255,255,255,0.9);
 }
 
+/* Very Small Screens */
+
+.small-screen-line-height {
+    line-height: 1;
+}
+
 
 /* Media Queries */
 
@@ -251,7 +258,13 @@
         padding-top: 5px;
     }
 }
- 
+
+ @media (min-width: 374px) {
+     .small-screen-line-height {
+         line-height: normal
+    }
+ }
+
 /* @media screen and (max-width: 1024px) {
     #control-background {
         border: none;
@@ -261,8 +274,8 @@
     }
 } */
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     #mainDiv {
         height: 80vh;
     }
-}
+} */

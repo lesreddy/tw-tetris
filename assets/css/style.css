@@ -2,6 +2,45 @@
 
 @import url('https://fonts.googleapis.com/css?family=Varela&display=swap');
 
+/* Global typography and styles used throughout*/
+
+.back {
+    background: rgb(255,255,255,0.8);
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+
+.logo {
+    text-align: center;
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 1.5rem;
+
+   }
+
+.label {
+    font-family: 'permanent marker', sans-serif;
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border: 1px black;
+    background: rgb(255,255,255,0.6);
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.sub {
+    font-family: permanent marker, sans-serif;
+    color: #FF7171;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border: 1px black;
+    font-size: 1.75rem;
+    }
+
+
+/* Header section */
 
 #mainlogo {
     text-align: center;
@@ -97,15 +136,6 @@
     background-size: cover;
 }
 
-.logo {
-    text-align: center;
-    color: yellow;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-family: "Permanent Marker", sans-serif;
-    font-size: 1.5rem;
-
-   }
-
 #tetris {
     display: block;
     margin-left: auto;
@@ -113,25 +143,6 @@
     border: solid.2em #fff;
     height: 75vh;
     opacity: 0.75;
-    }
-
-.label {
-    font-family: permanent marker, sans-serif;
-    color: yellow;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    border: 1px black;
-    background: rgb(255,255,255,0.6);
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 25px;
-}
-
-.sub {
-    font-family: permanent marker, sans-serif;
-    color: #FF7171;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    border: 1px black;
-    font-size: 1.75rem;
     }
 
 
@@ -159,6 +170,8 @@
     margin-bottom: 10px;
 }
 
+/* Player Control Section */
+
 #controls {
     list-style: none;
     font-size: 15px;
@@ -169,13 +182,6 @@
     font-family: 'Varela', sans-serif;
     font-size: 1rem;
     font-weight: 700;   
-}
-
-
-.back {
-    background: rgb(255,255,255,0.8);
-    border: 2px solid black;
-    border-radius: 25px;
 }
 
 #control-title {
@@ -191,27 +197,6 @@
     border-radius: 0px;
     background: #393f4d;
 }
-
-.tweakheight {  
-    border-radius: 100px / 50px;
-}
-
-.height20 {
-    height: 35%;
-    position: relative;
-    bottom: -110px;
-}
-
-.height80 {
-    height: 100%;
-    position: absolute;
-
-}
-
-.wrapper {
-    background: grey ;
-}
-
 
 /* Game Over Modal */
 

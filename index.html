@@ -44,7 +44,7 @@
                                     <p class="sub">Name:</p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="pt-2 main-key-values" id="name"></p>
+                                    <p class="pt-2 main-key-values" id="result"></p>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-none d-lg-block offset-lg-4 col-lg-8">
+                        <div class="mt-3 d-none d-lg-block offset-lg-4 col-lg-8">
                             <div class="back row">
                                 <div class="col-12">
                                     <p id="control-title" class="space text-center">Controls</p>
@@ -110,13 +110,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-none d-lg-block offset-lg-4 col-lg-8">
-                            <div class="back row">
-                                <div class="col-6">
-                                    <p class="sub">Time:</p>
-                                </div>
-                                <div class="col-6 p-0">
-                                    <p class="pt-3 main-key-values" id="time"></p>
+                        <div class="mt-3 d-none d-lg-block offset-lg-4 col-lg-8">
+                            <div class="row">
+                                <!-- set player name button -->
+                                <div class="col-6 text-center space">
+                                        <button id="playerNameLaunch" class="btn-block btn-success" >Set Player Name</button>
+                                    </div>
+                                <!-- restart game button  -->
+                                <div class="col-6 text-center space">
+                                    <button id="gamerestart" class="btn-block btn-success">Restart Game</button>
                                 </div>
                             </div>
                         </div>
@@ -157,8 +159,8 @@
         <div class="row mt-3">
             <!-- set player name button -->
             <div class="col-6 text-center space">
-                <button id="playername" class="btn btn-success">Player Name</button>
-            </div>
+                    <button id="playerNameLaunch" class="btn-block btn-success">Set Player Name</button>
+                </div>
             <!-- restart game button  -->
             <div class="col-6 text-center space">
                 <button id="gamerestart" class="btn btn-success">Restart Game</button>
@@ -170,12 +172,30 @@
 
 
 
-
+<!-- Player name Modal -->
+<div class="modal fade" id="playerNameModal" tabindex="-1" role="dialog" aria-labelledby="playerNameModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form class="userInfoModalForm">
+                <div class="modal-header col-12 text-center">
+                    <h5 class="modal-title red-text">Set Player Name</h5>
+                </div>
+                <div class="modal-body col-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" maxlength="15" aria-label="Type name here" required>
+                    </div>
+                </div>
+                <div class="modal-footer text-center space">
+                    <button id="player-name-submit-button" class="btn btn-success" aria-label="Submit Button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Finish Game Modal -->
     <div class="modal fade" id="finishGameModal" tabindex="-1" role="dialog" aria-labelledby="finishGameModal"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-body text-center modal-line">
                     <h5 class="modal-title col-12 logo" id="exampleModalCenterTitle">Game Over!</h5>

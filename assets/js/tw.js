@@ -27,30 +27,20 @@
   })();
 })();
 
-/**
- * sets the player username for the game - uses bootbox
- */
-document.getElementById("playername").addEventListener("click", playerName);
-function playerName(e){
-	var z = bootbox.prompt("PLEASE ENTER YOUR NAME", function display(z) {
-	  if (z != null) {
-		  document.getElementById("name").innerHTML = z;
-		  localStorage.playername = z;
-		  
-		  dis(z);
-	  }
-	  else
-		  document.getElementById("name").innerHTML = "";
+
+
+$(document).ready(function(){
+	$('#player-name-submit-button').click(function(){
+		var databack = $("#playerNameModal #username").val().trim();
+			$('#result').html(databack);
 	});
-	}
-	function dis(arg) {
-	  bootbox.alert("Player name set to " + arg);
-	}
-	if(localStorage.playername === undefined) {
-	  document.getElementById("name").innerHTML = "Player 1";
-	} else {
-	  document.getElementById("name").innerHTML = localStorage.playername;
-	}
+});
+
+
+$('#playerNameLaunch').click(function() {
+    $('#playerNameModal').modal('show');
+});
+
 /**
  * Resets the game
  */ 
@@ -404,7 +394,3 @@ document.addEventListener('keydown', event => {
 playerReset();
 updateScore();
 update();
-
-
-
-

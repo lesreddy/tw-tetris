@@ -41,7 +41,6 @@ document.getElementById("gamerestart").addEventListener("click", resetGame);
 /**
  * Resets the game from the game over modal 
  */
-
 document.getElementById("newGame").addEventListener("click", resetGame);
  function resetGame(e){
 	location.reload();

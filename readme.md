@@ -83,9 +83,25 @@ Secondary font was **Varela** which contrasts well with the primary choice of fo
 
 ### Existing Features
 
+1.  10 Different Levels:  As the player reaches 500 points then a new level will be shown by the background changing
+
+2.  Set Player Name:  When you click on this button you can set the name of the player
+
+3.  Reset Game:  When this is clicked you can start a new game
+
+4.  Level displayed onscreen as the bacground changes.
+
+5.  Score displayed onscreen when the player creates a new line.
 
 ### Remaining Features to Create
 
+1. High Score Table storing the top 5 scores with corresponding name
+
+2.  About screen which gives basic instructions on the game
+
+3.  Audio - background music and also sound when the blocks hit each other
+
+4.  Include some icons to improve the styling of the game.
 
 ## Applied Technologies
 
@@ -94,9 +110,7 @@ The following technologies were used to construct the site:
 1. [VSCode](https://code.visualstudio.com/) - a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. 
 2. [Bootstrap](https://www.bootstrapcdn.com/) - used to simplify the structure and to make it responsive.
 3. [jquery](https://www.jquery.com) - a required library for Bootbox.
-4. [Bootbox](http://bootboxjs.com/) - a small JavaScript library which allows you to create programmatic dialog boxes using Bootstrap modals, without having to worry about creating, managing, or removing any of the required DOM elements or JavaScript event handlers.
-5. [SweetAlert2](https://sweetalert2.github.io/) - A JS library for running stylistically improved JS popup boxes
-6. [PopperJS](https://popper.js.org/) - also a required JS library to run Bootbox
+4. [PopperJS](https://popper.js.org/) - also a required JS library to run Bootbox
 
 
 ## Testing

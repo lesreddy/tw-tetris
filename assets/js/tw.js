@@ -29,18 +29,6 @@
 
 
 
-$(document).ready(function(){
-	$('#player-name-submit-button').click(function(){
-		var databack = $("#playerNameModal #username").val().trim();
-			$('#result').html(databack);
-	});
-});
-
-
-$('#playerNameLaunch').click(function() {
-    $('#playerNameModal').modal('show');
-});
-
 /**
  * Resets the game
  */ 
@@ -273,7 +261,7 @@ function playerRotate(dir) {
 
 
 /**
- * below function switches the pieces position by rotating the matrix} matrix 
+ * below function switches the pieces position by rotating the  matrix 
  */
 function rotate(matrix, dir) {
 	for (let y = 0; y < matrix.length; ++y) {

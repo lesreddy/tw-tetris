@@ -38,7 +38,7 @@
                 <div class="col-lg-6 col-xl-4">
                     <div class="small-screen-line-height row">
                         <!-- player name  -->
-                        <div class="col-6 offset-md-2 col-md-4 offset-lg-4 col-lg-8">
+                        <div class="col-6 mb-1 offset-md-2 col-md-4 offset-lg-4 col-lg-8">
                             <div class="back row">
                                 <div class="col-6">
                                     <p class="sub">Name:</p>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <!-- player score -->
-                        <div class="back col-6 col-md-4 offset-lg-4 col-lg-8">
+                        <div class="back col-6 mb-1 col-md-4 offset-lg-4 col-lg-8">
                             <div class="row">
                                 <div class="col-6">
                                     <p class="sub">Score:</p>
@@ -64,7 +64,7 @@
 
                     <div class="small-screen-line-height row">
                         <!-- level reached -->
-                        <div class="col-6 offset-md-2 col-md-4 offset-lg-4 col-lg-8">
+                        <div class="col-6 mb-1 offset-md-2 col-md-4 offset-lg-4 col-lg-8">
                             <div class="back row">
                                 <div class="col-6">
                                     <p class="sub">Stage:</p>
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <!-- level time -->
-                        <div class="col-6 col-md-4 offset-lg-4 col-lg-8">
+                        <div class="col-6 mb-1 col-md-4 offset-lg-4 col-lg-8">
                             <div class="back row">
                                 <div class="col-6">
                                     <p class="sub">Time:</p>
@@ -114,7 +114,7 @@
                             <div class="row">
                                 <!-- set player name button -->
                                 <div class="col-6 text-center space">
-                                        <button id="playerNameLaunch" class="btn-block btn-success" >Set Player Name</button>
+                                        <button id="playerNameLaunchButton" class="btn-block btn-success">Set Player Name</button>
                                     </div>
                                 <!-- restart game button  -->
                                 <div class="col-6 text-center space">
@@ -182,7 +182,7 @@
                 </div>
                 <div class="modal-body col-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="username" name="username" maxlength="15" aria-label="Type name here" required>
+                        <input type="text" class="form-control" id="playername" name="playername" maxlength="15" aria-label="Type name here" required>
                     </div>
                 </div>
                 <div class="modal-footer text-center space">
@@ -198,7 +198,7 @@
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-body text-center modal-line">
-                    <h5 class="modal-title col-12 logo" id="exampleModalCenterTitle">Game Over!</h5>
+                    <h5 class="modal-title col-12 logo" id="ModalCenterTitle">Game Over!</h5>
                     <p class="red-text">Congratulations you reached Butterfly (level 1)</p>
                     <p class="logo">Fun Fact:</p>
                     <p id="fun-fact" class="green-text">A butterfly's lifecycle is made up of four parts, egg, larva
@@ -217,6 +217,7 @@
     <script src="assets/js/bootbox.min.js"></script>
     <script src="assets\js\sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="assets/js/misc.js"></script>
     <script src="assets/js/tw.js"></script>
 </body>
 

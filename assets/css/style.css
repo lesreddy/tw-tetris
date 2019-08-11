@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Varela&display=swap');
 
+
 /* Global typography and styles used throughout*/
 
 .back {
@@ -264,6 +265,10 @@
     }
  }
     
+
+.navbar-header {
+    position: absolute;
+}
 
 @media screen and (max-width: 992px) {
     .main-key-values {

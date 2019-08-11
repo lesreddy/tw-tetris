@@ -316,39 +316,47 @@ function updateScore() {
 		bround.style.backgroundImage = "url('../assets/images/frog.jpg')";
 		level.innerText = "2";
 		change.innerText = "2";
-		funfact.innerText = ""
+		funfact.innerText = "Frogs drink water by absorbing it through their skin and can jump over 20 times their own body length!";
 	} else if (player.score >= 1000 && player.score <= 1499) {
 		bround.style.backgroundImage = "url('../assets/images/macaw.jpg')";
 		level.innerText = "3";
 		change.innerText = "3";
+		funfact.innerText = "There are around 376 species of parrot throughout the world, and macaws are the biggest of all of them!";
 	} else if (player.score >= 2000 && player.score <= 2499) {
 		bround.style.backgroundImage = "url('../assets/images/snake.jpg')";
 		level.innerText = "4";
 		change.innerText = "4";
+		funfact.innerText = "There are over 3000 types of snakes in the world with the smallest being the Barbados threadsnake at average of 3.94 inches and the largest being the giant annaconda which can be as long as 30 feet!";
 	} else if (player.score >= 2500 && player.score <= 2999) {
 		bround.style.backgroundImage = "url('../assets/images/gorilla.jpg')";
 		level.innerText = "5";
 		change.innerText = "5"
+		funfact.innerText = "Gorillas have hands and feet like humans and some gorillas in captivity have learned to use sign language to communicate with humans!"
 	} else if (player.score >= 3000 && player.score <= 3499) {
 		bround.style.backgroundImage = "url('../assets/images/crocodile.jpg')";
 		level.innerText = "6";
 		change.innerText = "6";
+		funfact.innerText = "Crocodiles have the strongest bite of any animal in the world."
 	} else if (player.score >= 3500 && player.score <= 3999) {
 		bround.style.backgroundImage = "url('../assets/images/shark.jpg')";
 		level.innerText = "7";
 		change.innerText = "7";
+		funfact.innerText = "The jaws on the great white shark can produce a force of almost 4,000 pounds per square inch!"
 	} else if (player.score >= 4000 && player.score <= 4499) {
 		bround.style.backgroundImage = "url('../assets/images/tiger.jpg')";
 		level.innerText = "8";
 		change.innerText = "8";
+		funfact.innerText ="The tiger is the biggest species of the cat family.";
 	} else if (player.score >= 4500 && player.score <= 4999) {
 		bround.style.backgroundImage = "url('../assets/images/elephant.jpg')";
 		level.innerText = "9";
 		change.innerText = "9";
+		funfact.innerText = "Male African elephants can reach 3m tall and weigh between 4,000 -7,500kg."
 	} else if (player.score >= 5000) {
 		bround.style.backgroundImage = "url('../assets/images/lion.jpg')";
 		level.innerText = "10";
 		change.innerText = "10";
+		funfact.innerText = "Lions live for about 10-14 years in the wild. While in captivity they live for 20-25 years."
 	} 
 }
 

@@ -1,15 +1,15 @@
 let playerName = localStorage.getItem("playerName");
 
-function playerNameLaunchButton() {
+function playerNameSubmitButton() {
 	playerName = $('#playername').val();
 	localStorage.setItem("playerName", playerName);
 	$('#result').text(playerName);
 }
 
 $('#player-name-submit-button').click(function() {
-    playerNameLaunchButton();
+    playerNameSubmitButton();
 });
 
-$('#playerNameLaunchButton').click(function() {
+$('.playerNameLaunch').click(function() {
     $('#playerNameModal').modal('show');
 });

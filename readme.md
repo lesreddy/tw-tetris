@@ -176,6 +176,8 @@ Also I cannot implement a timer.  I wanted to put in a basic stopwatch of the ga
 Also I had issues with changing the size of the canvas element when changing screen sizes and making the game responsive. I did not want the width and height of the canvas to be set in the html mark up but found when I moved it over to css it became a big issue and it would create a blur effect when I attempted it. 
 The problem and the solution lies in this article but it was complex for me to interpret. https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
 
+I believe the overall frustration with this project and the amount of time lost on the bugs is unfortunately directly related to my strategy in producing the project.  By initially attempting to de-construct javascript code that was too far ahead of my understanding it proved to be my undoing.  Whilst I do believe it very much helped me improve my knowledge in Javascript I wasted too much time trying to understand the concepts and when it came to trying to augment the code and put my own stamp on it I went astray.  In hindsight I should have built something that was simple and that I could properly test using jasmine so I could more effectively stay on track and build up from there.  The core engine of this game is very interesting but too advanced for my current doding skill level.
+
 ## Deployment
 
 

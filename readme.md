@@ -41,7 +41,7 @@ Features include 10 levels, a realtime score, level and time update all designed
     - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
 
-7. [**Reflections**]
+7. [**Reflections**](#reflections)
 
 
 ## UX

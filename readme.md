@@ -139,7 +139,7 @@ The game works on all screen sizes but due to the issue I had with the canvas pr
 
 The end result was spending way too much time to achieve very little and not an overly appealing look, however as it stands the game is responsive.
 
-When I tried to implement the bootstrap ```#playerNameModal``` It unfortunately caused an error which did not keep the name that I had set for local storage with the code that I used. Attempted with javascript, then Jquery with no success.  It also caused a problem with the ```finishGameModal`` where it would not actually initialise and the screen just went dark.  After failing heavily with this process I aborted and then implemented the only thing that worked which was a bootbox modal referenced from my mentor's project.
+When I tried to implement the bootstrap ```#playerNameModal``` It unfortunately caused an error which did not keep the name that I had set for local storage with the code that I used. Attempted with javascript, then Jquery with no success.  It also caused a problem with the ```finishGameModal``` where it would not actually initialise and the screen just went dark.  After failing heavily with this process I aborted and then implemented the only thing that worked which was a bootbox modal referenced from my mentor's project.
 
 ### Validation
 

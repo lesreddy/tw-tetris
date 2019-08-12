@@ -77,7 +77,11 @@ Secondary font was **Varela** which contrasts well with the primary choice of fo
 
 **Background-Images**
 
-Each image was designed 
+Each image was designed to produce a contrasting vibrant colour linked in to the totally wild theme.  Each image represents a new level and a new animal with the lion being the last level.
+
+**Colour Scheme**
+
+The colour scheme is meant to potray strong bright and colourful images against a contrasting darker background.  I do believe this is achieved.
 
 
 ### Wireframes
@@ -89,7 +93,7 @@ Each image was designed
 
 ### Existing Features
 
-1.  10 Different Levels:  As the player reaches 250 points then a new level will be shown by the background changing.
+1.  10 Different Levels:  As the player reaches increments of 250 points then a new level will be shown by the background changing.
 
 2.  Set Player Name:  When you click on this button you can set the name of the player.
 
@@ -99,7 +103,7 @@ Each image was designed
 
 5.  Score displayed onscreen when the player creates a new line.
 
-6.  Pop up Modal which tells you which level you reached with a fun fact inside.
+6.  Pop up Modal which tells you which level you reached with a fun fact inside that changes dependent on the level.
 
 7.  Transparent Background images.
 
@@ -113,7 +117,9 @@ Each image was designed
 
 4. Include a navbar for smaller screens.
 
-5. Stopwatch timer to be implemented and triggered when each new game starts.
+5. Stopwatch timer to be implemented and triggered when each new game starts and put into the ```Timer``` box.
+
+6. Would like to create a message of some description when the user reaches a new level that flashes up and informs the player of the change of level.  For example it could say 'Congratulations you have reached Frog Level 2'.
 
 ## Applied Technologies
 
@@ -121,9 +127,9 @@ The following technologies were used to construct the site:
 
 1. [VSCode](https://code.visualstudio.com/) - a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. 
 2. [Bootstrap](https://www.bootstrapcdn.com/) - used to simplify the structure and to make it responsive.
-3. [jquery](https://www.jquery.com) - a required library for Bootbox.
-4. [PopperJS](https://popper.js.org/) - also a required JS library to run Bootbox
-
+3. [Bootbox](http://bootboxjs.com/getting-started.html) - required in order to get the player name modal to work.
+4. [jquery](https://www.jquery.com) - a required library for Bootbox.
+5. [PopperJS](https://popper.js.org/) - also a required JS library to run Bootbox
 
 ## Testing
 
@@ -132,6 +138,8 @@ The following technologies were used to construct the site:
 The game works on all screen sizes but due to the issue I had with the canvas properly re-sizing (see bugs) I had difficulty making it responsive in the way I would like.  Particularly when the screen is at Ipad pro dimensions where width of the screen is relatively close to the height (1024 x 1366).
 
 The end result was spending way too much time to achieve very little and not an overly appealing look, however as it stands the game is responsive.
+
+When I tried to implement the bootstrap ````#playerNameModal``` It unfortunately caused an error which did not keep the name that I had set for local storage with the code that I used. Attempted with javascript, then Jquery with no success.  It also caused a problem with the ```finishGameModal`` where it would not actually initialise and the screen just went dark.  After failing heavily with this process I aborted and then implemented the only thing that worked which was a bootbox modal referenced from my mentor's project.
 
 ### Validation
 
@@ -213,7 +221,7 @@ Alternatively,
 
 ### Branches
 
-The main branch used by the developer was the master branch.  However during the project in order to assist with debugging I created another branch called 'modals'.  This was done in order to attempt to overcome the many bugs and issues I had with creating my set player name bootstrap modal.  However as seems to be the theme with this project I somehow had another issue which was when merging the two and nearly lost a lot of code.  I then abandoned the idea of using another branch (due to much more lost time trying to recover it) and just maintained the code in the master branch.
+The main branch used by the developer was the master branch.  However during the project in order to assist with debugging I created another branch called ```modals```.  This was done in order to attempt to overcome the many bugs and issues I had with creating my set player name bootstrap modal.  However as seems to be the theme with this project I somehow had another issue which was when merging the two and nearly lost a lot of code.  I then abandoned the idea of using another branch (due to much more lost time trying to recover it) and just maintained the code in the master branch.
 
 ### Running locally
 
@@ -221,9 +229,9 @@ To clone this project from GitHub:
 
 1. Follow this link to the developers [Github Repository Page](https://github.com/lesreddy/tw-tetris).
 
-2. Click the big green button which says "Clone or download".
+2. Click the big green button which says ```Clone or download```.
 
-3. Copy the clone URL for the repository by highlighting it with the cursor and using `control c` or by clicking the little clipboard with an arrow on it.
+3. Copy the clone URL for the repository by highlighting it with the cursor and using ```ctrl c``` or by clicking the little clipboard with an arrow on it.
 
 4. Open your terminal in your IDE.
 
@@ -255,14 +263,14 @@ My mentor Simen Daelin provided me with his [project](https://eventyret.github.i
 
 ### Acknowledgements
 
-I have to thank my mentore
+I have to thank my mentor Simen Daelin for helping me understand the concepts and for steering me in the right direction when needed.  He was instrumental in getting me where I did actually get to in the project.
 
 ## Reflections
 
 This project has been a very frustrating process.  The idea was to utilise and de-construct a purely javascript game engine and re-build it in my own way.  The problem was that it took me two weeks just to de-construct the engine and even after significant analysis I found it very difficult to understand the code.  I therefore lost a lot of time on basically trying to understand someone elses code.  This then gave me less time and confidence to build the other elements of the game.
 
-There are still many elements to implement in order to complete it and I am not happy with the current state that I have to submit and I will go back and fix all the elements once I have built a better knowledge base and experience.
+There are still many elements to implement in order to complete it and I am not happy with the current state. I will go back and fix all the elements once I have built a better knowledge base, experience and time.
 
-This project gave me a great insight into how frustrating coding can actually be.  I have come out the other end with a project that I have spent too much time on for not a great result.  Its time to cut my losses move on and come back to it when time permits and my skills have improved.  On my next project I will be keeping things very simple and building up rather than trying any attempt at deconstruction just so I can product something that has wide recognition.
+Whilst This project gave me a great insight into how frustrating coding can actually be I have come out the other end with a project that I am not overly happy with but with a much better plan on how to approach the next one.  Its time to cut my losses, move on and come back to it later.  On my next project I will be keeping things very simple and building up rather than trying any attempt at deconstruction just so I can product something that has wide recognition.
 
-On the plus side I have still learnt a lot and am motivated more than ever to learn more about javascript and coding in general.
+On the plus side I have still learnt a lot and am motivated more than ever to learn more about javascript and coding in general going forward.

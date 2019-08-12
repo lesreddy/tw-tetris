@@ -29,7 +29,6 @@ Features include 10 levels, a realtime score, level and time update all designed
 4. [**Testing**](#testing)
     - [**Validation**](#validation)
     - [**Client Stories**](#client-stories)
-    - [**Manual**](#manual)
     - [**Bugs**](#bugs)
 
 5. [**Deployment**](#deployment)
@@ -95,15 +94,19 @@ Secondary font was **Varela** which contrasts well with the primary choice of fo
 
 6.  Pop up Modal which tells you which level you reached with a fun fact inside.
 
+7.  Transparent Background images.
+
 ### Remaining Features to Create
 
 1. High Score Table storing the top 5 scores with corresponding name
 
 2. About screen which gives basic details on the game and how you reach a different level each time you reach 500 points
 
-3. Audio - background music and also sound when the blocks hit each other
+3. Audio - background music and also sound when the blocks hit each other.
 
-4. Include some fontawesome icons to improve the styling of the game.
+4. Include a navbar for smaller screens.
+
+5. Stopwatch timer to be implemented and triggered when each new game starts.
 
 ## Applied Technologies
 
@@ -119,7 +122,7 @@ The following technologies were used to construct the site:
 
 Tested on Chrome and Safari and the game works 
 
-Responsive tested mainly through Chrome Developer tools.
+Responsive tested mainly through Chrome Developer tools but
 
 ### Validation
 
@@ -151,7 +154,6 @@ This is achieved with the typography and colorful nature of the game.
 
 This is not yet achieved.
 
-### Manual
 
 ### Bugs
 
@@ -172,6 +174,7 @@ https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
 ## Deployment
 
 
+
 ### Installation
 
 ### Running Locally
@@ -188,7 +191,9 @@ Images were taken from [Pexels](https://www.pexels.com/).
 
 [MS Paint](https://ms-paint.en.softonic.com/) was also used to re-size images down for implementing onto [ImgBB](https://imgbb.com) for this readme file.
 
-
 ### Acknowledgements
 
 ## Reflections
+
+This project has been a very frustrating process.  The idea was to utilise and de-construct a purely javascript game engine and re-build it in my own way.  The problem was that it took me two weeks just to de-construct the engine and even after significant analysis I found it very difficult to understand the code.  I therefore lost a lot of time on basically trying to understand someone elses code.  This then gave me less time and confidence to build the other elements of the game.
+There are still many elements to implement in order to complete it and I am not happy with the current state that I have to submit and I will go back and fix all the elements once I have built a better knowledge base and experience.

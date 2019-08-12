@@ -34,7 +34,7 @@ function playerName(z){
 		  dis(z);
 	  }
 	  else
-		  document.getElementById("playername").innerHTML = "thankyou";
+		  document.getElementById("playername").innerHTML = "New Player";
 	});
 	}
 	function dis(arg) {

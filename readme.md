@@ -49,7 +49,7 @@ Features include 10 levels, a realtime score, level and time update all designed
 
 ### Goals
 
-The primary purpose was to build a game with as much Javascript as possible to expediate the developers (a beginner) learning of it.
+The primary purpose was to build a very recognisable game for the user/player with as much Javascript as possible to expediate the developers (a beginner) learning of it.
 
 ### User Stories
 
@@ -64,6 +64,8 @@ The primary purpose was to build a game with as much Javascript as possible to e
 5.  Bright and colourful to resonate and reiterate the fun nature of the game.
 
 6.  Appropriate background music that can be switched on and off.
+
+7.  Create a feature that gives the game a bit of a point of difference.
 
 ### Design
 
@@ -82,9 +84,9 @@ Secondary font was **Varela** which contrasts well with the primary choice of fo
 
 ### Existing Features
 
-1.  10 Different Levels:  As the player reaches 500 points then a new level will be shown by the background changing
+1.  10 Different Levels:  As the player reaches 250 points then a new level will be shown by the background changing.
 
-2.  Set Player Name:  When you click on this button you can set the name of the player
+2.  Set Player Name:  When you click on this button you can set the name of the player.
 
 3.  Reset Game:  When this is clicked you can start a new game
 
@@ -120,9 +122,11 @@ The following technologies were used to construct the site:
 
 ## Testing
 
-Tested on Chrome and Safari and the game works 
+### Responsiveness
 
-Responsive tested mainly through Chrome Developer tools but
+The game works on all screen sizes but due to the issue I had with the canvas properly re-sizing (see bugs) I had difficulty making it responsive in the way I would like.  Particularly when the screen is at Ipad pro dimensions where width of the screen is relatively close to the height (1024 x 1366).
+
+The end result was spending way too much time to achieve very little and not an overly appealing look, however as it stands the game is responsive.
 
 ### Validation
 
@@ -144,11 +148,11 @@ This could be better as there is currently no about screen but the simple nature
 
 4.  Small fun learning component to it.
 
-This is not really achieved yet as currently the fun fact only shows up once for level 1.
+This is achieved using the end game modal which tells a different fun fact at the end of each level.
 
 5.  Bright and colourful to resonate and reiterate the fun nature of the game.
 
-This is achieved with the typography and colorful nature of the game.
+This is achieved with the typography and colorful nature of the game but the overall look could be more appealing
 
 6.  Appropriate background music that can be switched on and off.
 
@@ -159,17 +163,18 @@ This is not yet achieved.
 
 The major flaw with the game is that it only works with a keyboard so on smaller screens its basically redundant.
 
-Currently I cannot get the name to store on the screen.
+I also had lots of difficulty creating modal for setting the player name.  I attempted to use bootstrap and the set the name from local storage but for whatever reason this would only put the name up for an instant and then disappear.  I have left the code in that I eventually want to use commented out and hopefully I can return to this project and fix it at some stage.
 
-I also cannot get the fun fact to change for each level.
+I think this has something to do with an uncaught reference error "module is not defined" but my debugging skills are basically non-existant so I could not find the cause to this.
 
-Also I cannot implement a timer.
+I attempted to de-bug by following the W3 Schools guide https://www.w3schools.com/js/js_debugging.asp and also watching the https://www.youtube.com/watch?v=H0XScE08hy8.  It was very frustrating not being able to do this.
 
-Also I had issues with changing the size of the canvas element when changing screen sizes and making the game responsive.
+In order to get the name to eventually work on the screen I had to reference my mentor Simon Daelins work (https://github.com/Eventyret/tetris-game/blob/master/assets/js/misc.js) and used bootbox to display it.  This was not how I wanted to do it but it does work 
 
-I believe the solution lies in this article but it was complex for me to interpret.
+Also I cannot implement a timer.  I wanted to put in a basic stopwatch of the game so that when the game starts it triggers a stopwatch.  However given the amount of time I lost on the other issues I could not get this to work.  I attempted to reference https://www.youtube.com/watch?v=fF-vtP3sjPc in order to construct my own version but again became too frustrated with it and could not get it to work for me.
 
-https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
+Also I had issues with changing the size of the canvas element when changing screen sizes and making the game responsive. I did not want the width and height of the canvas to be set in the html mark up but found when I moved it over to css it became a big issue and it would create a blur effect when I attempted it. 
+The problem and the solution lies in this article but it was complex for me to interpret. https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
 
 ## Deployment
 

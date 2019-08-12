@@ -32,11 +32,11 @@ Features include 10 levels, a realtime score, level and time update all designed
     - [**Bugs**](#bugs)
 
 5. [**Deployment**](#deployment)
-    - [**Installation**](#installation)
+    - [**From The Browser**](#from-the-browser)
+    - [**Branches**](#branches)
     - [**Running Locally**](#running-locally)
 
 6. [**Credits**](#credits)
-    - [**Content**](#content)
     - [**Media**](#media)
     - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
@@ -74,6 +74,11 @@ The primary purpose was to build a very recognisable game for the user/player wi
 Primary font chosen was **Permanent Marker** to give a jungle feel to the game and ensure a fun theme is created.
 
 Secondary font was **Varela** which contrasts well with the primary choice of font but also allows a clearer 
+
+**Background-Images**
+
+Each image was designed 
+
 
 ### Wireframes
 
@@ -130,6 +135,7 @@ The end result was spending way too much time to achieve very little and not an 
 
 ### Validation
 
+
 * Ran [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate the css file and also [W3C Markup Validation Service](https://validator.w3.org/) to validate the html markup.
 
 ### Client Stories
@@ -176,19 +182,62 @@ Also I cannot implement a timer.  I wanted to put in a basic stopwatch of the ga
 Also I had issues with changing the size of the canvas element when changing screen sizes and making the game responsive. I did not want the width and height of the canvas to be set in the html mark up but found when I moved it over to css it became a big issue and it would create a blur effect when I attempted it. 
 The problem and the solution lies in this article but it was complex for me to interpret. https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
 
-I believe the overall frustration with this project and the amount of time lost on the bugs is unfortunately directly related to my strategy in producing the project.  By initially attempting to de-construct javascript code that was too far ahead of my understanding it proved to be my undoing.  Whilst I do believe it very much helped me improve my knowledge in Javascript I wasted too much time trying to understand the concepts and when it came to trying to augment the code and put my own stamp on it I went astray.  In hindsight I should have built something that was simple and that I could properly test using jasmine so I could more effectively stay on track and build up from there.  The core engine of this game is very interesting but too advanced for my current doding skill level.
+I believe the overall frustration with this project and the amount of time lost on the bugs is unfortunately directly related to my strategy in producing the project.  By initially attempting to de-construct javascript code that was too far ahead of my understanding it proved to be my undoing.  Whilst I do believe it very much helped me improve my knowledge in Javascript I wasted too much time trying to understand the concepts and when it came to trying to augment the code and put my own stamp on it I went astray.  In hindsight I should have built something that was simple and that I could properly test using jasmine so I could more effectively stay on track and build up from there.  The core engine of this game is very interesting but too advanced for my current coding skill level.
 
 ## Deployment
 
+### From the Browser 
 
+This project was developed using the [VS Code](https://code.visualstudio.com/), committed to git and pushed to GitHub.
+Totally Wild Tetris can be deployed by going to the developers GitHub Repsitory [GitHub repository](https://github.com/lesreddy/tw-tetris) and taking the following steps:
 
-### Installation
+The easiest way is via this method:
 
-### Running Locally
+1.  Log into the developors [Github Repository Page](https://github.com/lesreddy/tw-tetris) and choose **lesreddy/tw-tetris**
+
+2.  Then simply click the link which is at the top of the page - (https://github.com/lesreddy/tw-tetris) and it will launch.
+
+Alternatively,
+
+1. Log into the developers [GitHub Repository Page](https://github.com/lesreddy/tw-tetris) and from the list of repositories on the screen choose **lesreddy/tw-tetris**. 
+
+2. Select **Settings** from the menu near the top of the page.
+
+4. Go to the **GitHub Pages** section. (scroll down)
+
+5. Click the drop-down menu labelled **None** and select **Master Branch** which can be found under the **Source** section.
+
+6. After selecting Master Branch the page is automatically refreshed, tw-tetris is now deployed.
+
+7. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
+
+### Branches
+
+The main branch used by the developer was the master branch.  However during the project in order to assist with debugging I created another branch called 'modals'.  This was done in order to attempt to overcome the many bugs and issues I had with creating my set player name bootstrap modal.  However as seems to be the theme with this project I somehow had another issue which was when merging the two and nearly lost a lot of code.  I then abandoned the idea of using another branch (due to much more lost time trying to recover it) and just maintained the code in the master branch.
+
+### Running locally
+
+To clone this project from GitHub:
+
+1. Follow this link to the developers [Github Repository Page](https://github.com/lesreddy/tw-tetris).
+
+2. Click the big green button which says "Clone or download".
+
+3. Copy the clone URL for the repository by highlighting it with the cursor and using `control c` or by clicking the little clipboard with an arrow on it.
+
+4. Open your terminal in your IDE.
+
+5. Change the current working directory to the location where you want the cloned directory to be made.
+
+6. Type ```git clone```, and then paste the URL you copied in Step 3.
+
+```console
+git clone https://github.com/USERNAME/REPOSITORY
+```
+
+7. Press Enter. Your local clone will be created.
 
 ## Credits 
-
-### Content
  
 ### Media
 
@@ -198,9 +247,22 @@ Images were taken from [Pexels](https://www.pexels.com/).
 
 [MS Paint](https://ms-paint.en.softonic.com/) was also used to re-size images down for implementing onto [ImgBB](https://imgbb.com) for this readme file.
 
+## Code 
+
+The games engine and core javascript was referenced from developer [meth meth method](https://www.youtube.com/watch?v=H2aW5V46khA).  It took me two weeks to de-construct his 51 minute video and put it into my project so that I understood it.  I also referenced [Code Explained](https://www.youtube.com/watch?v=HEsAr2Yt2do) to further help me understand the concepts I was putting into the project.
+
+My mentor Simen Daelin provided me with his [project](https://eventyret.github.io/tetris-game/) which I also referenced to get the use of bootbox for providing a player name.  This was because I could not get my bootstrap modal to work and I wanted to at least submit the project with a working modal.
+
 ### Acknowledgements
+
+I have to thank my mentore
 
 ## Reflections
 
 This project has been a very frustrating process.  The idea was to utilise and de-construct a purely javascript game engine and re-build it in my own way.  The problem was that it took me two weeks just to de-construct the engine and even after significant analysis I found it very difficult to understand the code.  I therefore lost a lot of time on basically trying to understand someone elses code.  This then gave me less time and confidence to build the other elements of the game.
+
 There are still many elements to implement in order to complete it and I am not happy with the current state that I have to submit and I will go back and fix all the elements once I have built a better knowledge base and experience.
+
+This project gave me a great insight into how frustrating coding can actually be.  I have come out the other end with a project that I have spent too much time on for not a great result.  Its time to cut my losses move on and come back to it when time permits and my skills have improved.  On my next project I will be keeping things very simple and building up rather than trying any attempt at deconstruction just so I can product something that has wide recognition.
+
+On the plus side I have still learnt a lot and am motivated more than ever to learn more about javascript and coding in general.

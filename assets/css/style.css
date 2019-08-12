@@ -266,10 +266,6 @@
  }
     
 
-.navbar-header {
-    position: absolute;
-}
-
 @media screen and (max-width: 992px) {
     .main-key-values {
         font-size: 12px;
@@ -288,18 +284,3 @@
          line-height: normal
     }
  }
-
-/* @media screen and (max-width: 1024px) {
-    #control-background {
-        border: none;
-        border-top: 2px solid black;
-        border-radius: 0px;
-        background: white;
-    }
-} */
-
-/* @media (min-width: 1024px) {
-    #mainDiv {
-        height: 80vh;
-    }
-} */

@@ -199,18 +199,19 @@ I also had lots of difficulty creating modal for setting the player name.  I att
 
 ~I think this has something to do with an uncaught reference error "module is not defined" but my debugging skills are basically non-existant so I could not find the cause to this.~ 
 
-I have now fixed this error and it is still no joy with the player modal.
+I have now fixed this error and it the bootstrap player modal is unsuccessful.
 
-I attempted to de-bug by following the W3 Schools guide https://www.w3schools.com/js/js_debugging.asp and also watching the https://www.youtube.com/watch?v=H0XScE08hy8.  It was very frustrating not being able to do this.
+I attempted to de-bug by following the [W3-Schools-guide](https://www.w3schools.com/js/js_debugging.asp) and also watching a youtube [debug](https://www.youtube.com/watch?v=H0XScE08hy8) video.  It was very frustrating not being able to do this.
 
-In order to get the name to eventually work on the screen I had to reference my mentor Simen Daelins work (https://github.com/Eventyret/tetris-game/blob/master/assets/js/misc.js) and used bootbox to display it.  This was not how I wanted to do it but it does work 
+In order to get the name to eventually work on the screen I had to reference my mentor [Simen-Daelins](https://github.com/Eventyret/tetris-game/blob/master/assets/js/misc.js) and used bootbox to display it.  This was not how I wanted to do it but it does work 
 
-Also I cannot implement a timer.  I wanted to put in a basic stopwatch of the game so that when the game starts it triggers a stopwatch.  However given the amount of time I lost on the other issues I could not get this to work.  I attempted to reference developer [GeekLaunch](https://www.youtube.com/watch?v=fF-vtP3sjPc) in order to construct my own version but I ran out of time to get it working properly so I just left it at this stage.
+Also I cannot implement a timer.  I wanted to put in a basic stopwatch of the game so that when the game starts it triggers a stopwatch.   I attempted to reference developer [GeekLaunch](https://www.youtube.com/watch?v=fF-vtP3sjPc) in order to construct my own version but I ran out of time to get it working properly so I just left and will go back to it later.
 
 Also I had issues with changing the size of the canvas element when changing screen sizes and making the game responsive. I did not want the width and height of the canvas to be set in the html mark up but found when I moved it over to css it became a big issue and it would create a blur effect when I attempted it. 
-The problem and the solution lies in this article but it was complex for me to interpret. The article can be found [here](https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da)
 
-I believe the overall frustration with this project and the amount of time lost on the bugs is unfortunately directly related to my strategy in producing the project.  By initially attempting to de-construct javascript code that was too far ahead of my understanding it proved to be my undoing.  Whilst I do believe it very much helped me improve my knowledge in Javascript I wasted too much time trying to understand the concepts and when it came to trying to augment the code and put my own stamp on it I went astray.  In hindsight I should have built something that was simple and that I could properly test using jasmine so I could more effectively stay on track and build up from there.  The core engine of this game is very interesting but too advanced for my current coding skill level.
+I believe The problem and the solution lies in this article but it was complex for me to interpret. The article can be found [here](https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da)
+
+I believe the overall frustration with the bugs in this project and the amount of time lost to them  is unfortunately directly related to my strategy in producing the project.  By initially attempting to de-construct javascript code that was too far ahead of my understanding it proved to be my undoing.  Whilst I do believe it very much helped me improve my knowledge in Javascript I wasted too much time trying to understand the concepts and when it came to trying to augment the code and put my own stamp on it proved very challenging.  In hindsight I should have attempted a simpler project that I could properly test using jasmine deliver a more polished result in the time I had.
 
 ## Deployment
 
@@ -266,6 +267,8 @@ Images were taken from [Pexels](https://www.pexels.com/).
 [MS Paint](https://ms-paint.en.softonic.com/) was also used to re-size images down for implementing onto [ImgBB](https://imgbb.com) for this readme file.
 
 ## Code 
+
+For the Main Title Totally Wild Tetris I used code from [Riley-Shaw](https://codepen.io/rileyjshaw/pen/vExWpe)
 
 The games engine and core javascript was referenced from developers [meth meth method](https://www.youtube.com/watch?v=H2aW5V46khA) and [Code Explained](https://www.youtube.com/watch?v=HEsAr2Yt2do). This process took two weeks and was much more time consuming than first thought as I had to understand each concept as I rebuilt it into my own.
 

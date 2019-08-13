@@ -44,7 +44,56 @@ document.getElementById("newGame").addEventListener("click", resetGame);
 	location.reload();
 }
 
+let playerName = localStorage.getItem("playerName");
 
+/**
+ * 
+ This function is designed to set the player name using local storage and activated when the set player name modal inititalises
+ */
+ function playerNameSubmitButton() {
+	playerName = $('#playername').val();
+	localStorage.setItem("playerName", playerName);
+	$('#player').text(playerName);
+	return;
+}
+
+$('#player-name-submit-button').click(function() {
+    playerNameSubmitButton();
+}); 
+
+$('.playerNameLaunch').click(function() {
+    $('#playerNameModal').modal('show');
+}); 
+
+
+
+/**
+ * 
+ * This function was implemented referencing my mentor (simen Daelin's: https://github.com/Eventyret/tetris-game/blob/master/assets/js/misc.js) z 
+ * The reason for this was because I could not get my modal to work properly(#playerNameModal)
+ */
+/* function playerName(z){
+	var z = bootbox.prompt("Let's set your playername", function display(z) {
+	  if (z != null) {
+		  document.getElementById("playername").innerHTML = z;
+		  localStorage.playername = z;
+		  
+		  dis(z);
+	  }
+	  else
+		  document.getElementById("playername").innerHTML = "New Player";
+	});
+	}
+	function dis(arg) {
+	  bootbox.alert("Player name set to " + arg);
+	}
+	if(localStorage.playername === undefined) {
+	  document.getElementById("playername").innerHTML = "Player 1";
+	} else {
+	  document.getElementById("playername").innerHTML = localStorage.playername;
+	}
+
+	*/
 
 /**
  * Sets up the Canvas
@@ -310,47 +359,47 @@ function updateScore() {
 		level.innerText = "1";
 		change.innerText = "1";
 	} else if (player.score >= 50 && player.score <= 99) {
-		bround.style.backgroundImage = "url('../assets/images/frog.jpg')";
+		bround.style.backgroundImage = "url('assets/images/frog.jpg')";
 		level.innerText = "2";
 		change.innerText = "2";
 		funfact.innerText = "Frogs drink water by absorbing it through their skin and can jump over 20 times their own body length!";
 	} else if (player.score >= 100 && player.score <= 149) {
-		bround.style.backgroundImage = "url('../assets/images/macaw.jpg')";
+		bround.style.backgroundImage = "url('assets/images/macaw.jpg')";
 		level.innerText = "3";
 		change.innerText = "3";
 		funfact.innerText = "There are around 376 species of parrot throughout the world, and macaws are the biggest of all of them!";
 	} else if (player.score >= 150 && player.score <= 199) {
-		bround.style.backgroundImage = "url('../assets/images/snake.jpg')";
+		bround.style.backgroundImage = "url('assets/images/snake.jpg')";
 		level.innerText = "4";
 		change.innerText = "4";
 		funfact.innerText = "There are over 3000 types of snakes in the world with the smallest being the Barbados threadsnake at average of 3.94 inches and the largest being the giant annaconda which can be as long as 30 feet!";
 	} else if (player.score >= 200 && player.score <= 249) {
-		bround.style.backgroundImage = "url('../assets/images/gorilla.jpg')";
+		bround.style.backgroundImage = "url('assets/images/gorilla.jpg')";
 		level.innerText = "5";
 		change.innerText = "5"
 		funfact.innerText = "Gorillas have hands and feet like humans and some gorillas in captivity have learned to use sign language to communicate with humans!"
 	} else if (player.score >= 250 && player.score <= 299) {
-		bround.style.backgroundImage = "url('../assets/images/crocodile.jpg')";
+		bround.style.backgroundImage = "url('assets/images/crocodile.jpg')";
 		level.innerText = "6";
 		change.innerText = "6";
 		funfact.innerText = "Crocodiles have the strongest bite of any animal in the world."
 	} else if (player.score >= 300 && player.score <= 349) {
-		bround.style.backgroundImage = "url('../assets/images/shark.jpg')";
+		bround.style.backgroundImage = "url('assets/images/shark.jpg')";
 		level.innerText = "7";
 		change.innerText = "7";
 		funfact.innerText = "Adult great white sharks grow to a maximum size of approximately 20 feet in length, weigh up to 6,600 pounds, and are estimated to live for 30 years."
 	} else if (player.score >= 350 && player.score <= 399) {
-		bround.style.backgroundImage = "url('../assets/images/tiger.jpg')";
+		bround.style.backgroundImage = "url('assets/images/tiger.jpg')";
 		level.innerText = "8";
 		change.innerText = "8";
 		funfact.innerText ="The tiger is the biggest species of the cat family.";
 	} else if (player.score >= 400 && player.score <= 449) {
-		bround.style.backgroundImage = "url('../assets/images/elephant.jpg')";
+		bround.style.backgroundImage = "url('assets/images/elephant.jpg')";
 		level.innerText = "9";
 		change.innerText = "9";
 		funfact.innerText = "Male African elephants can reach 3m tall and weigh between 4,000 -7,500kg."
 	} else if (player.score >= 450) {
-		bround.style.backgroundImage = "url('../assets/images/lion.jpg')";
+		bround.style.backgroundImage = "url('assets/images/lion.jpg')";
 		level.innerText = "10";
 		change.innerText = "10";
 		funfact.innerText = "Lions live for about 10-14 years in the wild. While in captivity they live for 20-25 years."
@@ -388,7 +437,7 @@ document.addEventListener('keydown', event => {
 	}  else if (event.keyCode === 76) {
 		playerMove(1);
 	} else if (event.keyCode === 75) {
-	playerDrop();
+		playerDrop();
 	} else if (event.keyCode === 87) {
 		playerRotate(-1);
 	} else if (event.keyCode === 81) {

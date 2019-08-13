@@ -128,8 +128,11 @@ The following technologies were used to construct the site:
 1. [VSCode](https://code.visualstudio.com/) - a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. 
 2. [Bootstrap](https://www.bootstrapcdn.com/) - used to simplify the structure and to make it responsive.
 3. [Bootbox](http://bootboxjs.com/getting-started.html) - required in order to get the player name modal to work.
-4. [jquery](https://www.jquery.com) - a required library for Bootbox.
+4. [jQuery](https://www.jquery.com) - a required library for Bootbox.
 5. [PopperJS](https://popper.js.org/) - also a required JS library to run Bootbox
+6. HTML - Used in Index.html
+7. Javascript 
+
 
 ## Testing
 
@@ -261,7 +264,7 @@ Images were taken from [Pexels](https://www.pexels.com/).
 
 ## Code 
 
-The games engine and core javascript was referenced from developer [meth meth method](https://www.youtube.com/watch?v=H2aW5V46khA).  It took me two weeks to de-construct his 51 minute video and put it into my project so that I understood it.  I also referenced [Code Explained](https://www.youtube.com/watch?v=HEsAr2Yt2do) to further help me understand the concepts I was putting into the project.
+The games engine and core javascript was referenced from developers [meth meth method](https://www.youtube.com/watch?v=H2aW5V46khA) and [Code Explained](https://www.youtube.com/watch?v=HEsAr2Yt2do). This process took two weeks and was much more time consuming than first thought as I had to understand each concept as I rebuilt it into my own.
 
 My mentor Simen Daelin provided me with his [project](https://eventyret.github.io/tetris-game/) which I also referenced to get the use of bootbox for providing a player name.  This was because I could not get my bootstrap modal to work and I wanted to at least submit the project with a working modal.
 
@@ -271,10 +274,9 @@ I have to thank my mentor Simen Daelin for helping me understand the concepts an
 
 ## Reflections
 
-This project has been a very frustrating process.  The idea was to utilise and de-construct a purely javascript game engine and re-build it in my own way.  The problem was that it took me two weeks just to de-construct the engine and even after significant analysis I found it very difficult to understand the code.  I therefore lost a lot of time on basically trying to understand someone elses code.  This then gave me less time and confidence to build the other elements of the game.
+By enlarge this project has been quite difficult and at times a frustrating process.  The idea was to utilise a purely javascript game and re-build it in my own way.  The problem was that it took me two weeks just to build the basic game engine and even after significant analysis I found it very difficult to understand the code, which costed more time than expected.  This then gave me less time and confidence to build the other elements of the game.
 
 There are still many elements to implement in order to complete it and I am not happy with the current state. I will go back and fix all the elements once I have built a better knowledge base, experience and time.
 
-Whilst This project gave me a great insight into how frustrating coding can actually be I have come out the other end with a project that I am not overly happy with but with a much better plan on how to approach the next one.  Its time to cut my losses, move on and come back to it later.  On my next project I will be keeping things very simple and building up rather than trying any attempt at deconstruction just so I can product something that has wide recognition.
+Whilst This project gave me a great insight into how challenging coding can actually be I have come out the other end with a project that I am not overly happy with but with a much better plan on how to approach the next one and a vastly improved knowledge in javascript which was my main goal as a developer, so from that sense it was a success.  On my next project I will be keeping things very simple and building up rather than trying anything too complex and too far out of my comfort zone.
 
-On the plus side I have still learnt a lot and am motivated more than ever to learn more about javascript and coding in general going forward.

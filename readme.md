@@ -25,15 +25,15 @@ Features include 10 levels, a realtime score, level and time update all designed
     - [**Remaining Features to Create**](#remaining-features-to-create)
 
 3. [**Applied Technologies**](#appplied-technologies)
+    - [**Languages**](#languages)
 
 4. [**Testing**](#testing)
     - [**Validation**](#validation)
-    - [**Client Stories**](#client-stories)
+    - [**User Stories**](#user-stories)
     - [**Bugs**](#bugs)
 
 5. [**Deployment**](#deployment)
-    - [**From The Browser**](#from-the-browser)
-    - [**Branches**](#branches)
+    - [**From Github**](#from-github)
     - [**Running Locally**](#running-locally)
 
 6. [**Credits**](#credits)
@@ -91,7 +91,7 @@ The colour scheme is meant to potray strong bright and colourful images against 
 
 ## Features
 
-### Existing Features
+### Current Features
 
 1.  10 Different Levels:  As the player reaches increments of 250 points then a new level will be shown by the background changing.
 
@@ -130,8 +130,13 @@ The following technologies were used to construct the site:
 3. [Bootbox](http://bootboxjs.com/getting-started.html) - required in order to get the player name modal to work.
 4. [jQuery](https://www.jquery.com) - a required library for Bootbox.
 5. [PopperJS](https://popper.js.org/) - also a required JS library to run Bootbox
-6. HTML - Used in Index.html
-7. Javascript 
+6. [Google Fonts](https://fonts.google.com/) - used to style the website fonts.
+
+### Languages
+
+1. HTML - Created a file called [Index.html](https://github.com/lesreddy/tw-tetris/blob/master/index.html)
+2. Javascript - Created a file called [tw.js](https://github.com/lesreddy/tw-tetris/blob/master/assets/js/tw.js)
+3. CSS - Created a file called [style.css](https://github.com/lesreddy/tw-tetris/blob/master/assets/css/style.css)
 
 
 ## Testing
@@ -153,7 +158,7 @@ When I tried to implement the bootstrap ```#playerNameModal``` It unfortunately 
 
 * Ran [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate the css file and also [W3C Markup Validation Service](https://validator.w3.org/) to validate the html markup.
 
-### Client Stories
+### User Stories
 
 1. The game to look as much like a real tetris game as possible.
 
@@ -186,35 +191,30 @@ The major flaw with the game is that it only works with a keyboard so on smaller
 
 I also had lots of difficulty creating modal for setting the player name.  I attempted to use bootstrap and the set the name from local storage but for whatever reason this would only put the name up for an instant and then disappear.  I have left the code in that I eventually want to use commented out and hopefully I can return to this project and fix it at some stage.
 
-I think this has something to do with an uncaught reference error "module is not defined" but my debugging skills are basically non-existant so I could not find the cause to this.
+~I think this has something to do with an uncaught reference error "module is not defined" but my debugging skills are basically non-existant so I could not find the cause to this.~ 
+
+I have now fixed this error and it is still no joy with the player modal.
 
 I attempted to de-bug by following the W3 Schools guide https://www.w3schools.com/js/js_debugging.asp and also watching the https://www.youtube.com/watch?v=H0XScE08hy8.  It was very frustrating not being able to do this.
 
-In order to get the name to eventually work on the screen I had to reference my mentor Simon Daelins work (https://github.com/Eventyret/tetris-game/blob/master/assets/js/misc.js) and used bootbox to display it.  This was not how I wanted to do it but it does work 
+In order to get the name to eventually work on the screen I had to reference my mentor Simen Daelins work (https://github.com/Eventyret/tetris-game/blob/master/assets/js/misc.js) and used bootbox to display it.  This was not how I wanted to do it but it does work 
 
-Also I cannot implement a timer.  I wanted to put in a basic stopwatch of the game so that when the game starts it triggers a stopwatch.  However given the amount of time I lost on the other issues I could not get this to work.  I attempted to reference https://www.youtube.com/watch?v=fF-vtP3sjPc in order to construct my own version but again became too frustrated with it and could not get it to work for me.
+Also I cannot implement a timer.  I wanted to put in a basic stopwatch of the game so that when the game starts it triggers a stopwatch.  However given the amount of time I lost on the other issues I could not get this to work.  I attempted to reference developer [GeekLaunch](https://www.youtube.com/watch?v=fF-vtP3sjPc) in order to construct my own version but I ran out of time to get it working properly so I just left it at this stage.
 
 Also I had issues with changing the size of the canvas element when changing screen sizes and making the game responsive. I did not want the width and height of the canvas to be set in the html mark up but found when I moved it over to css it became a big issue and it would create a blur effect when I attempted it. 
-The problem and the solution lies in this article but it was complex for me to interpret. https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
+The problem and the solution lies in this article but it was complex for me to interpret. The article can be found [here](https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da)
 
 I believe the overall frustration with this project and the amount of time lost on the bugs is unfortunately directly related to my strategy in producing the project.  By initially attempting to de-construct javascript code that was too far ahead of my understanding it proved to be my undoing.  Whilst I do believe it very much helped me improve my knowledge in Javascript I wasted too much time trying to understand the concepts and when it came to trying to augment the code and put my own stamp on it I went astray.  In hindsight I should have built something that was simple and that I could properly test using jasmine so I could more effectively stay on track and build up from there.  The core engine of this game is very interesting but too advanced for my current coding skill level.
 
 ## Deployment
 
-### From the Browser 
+### From Github
 
 This project was developed using the [VS Code](https://code.visualstudio.com/), committed to git and pushed to GitHub.
-Totally Wild Tetris can be deployed by going to the developers GitHub Repsitory [GitHub repository](https://github.com/lesreddy/tw-tetris) and taking the following steps:
+Totally Wild Tetris can be deployed by going to the developers GitHub Repsitory [GitHub repository](https://github.com/lesreddy/) and taking the following steps:
 
-The easiest way is via this method:
 
-1.  Log into the developors [Github Repository Page](https://github.com/lesreddy/tw-tetris) and choose **lesreddy/tw-tetris**
-
-2.  Then simply click the link which is at the top of the page - (https://github.com/lesreddy/tw-tetris) and it will launch.
-
-Alternatively,
-
-1. Log into the developers [GitHub Repository Page](https://github.com/lesreddy/tw-tetris) and from the list of repositories on the screen choose **lesreddy/tw-tetris**. 
+1. Log into Github and choose off the list of repositories **lesreddy/tw-tetris**. 
 
 2. Select **Settings** from the menu near the top of the page.
 
@@ -226,9 +226,6 @@ Alternatively,
 
 7. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
 
-### Branches
-
-The main branch used by the developer was the master branch.  However during the project in order to assist with debugging I created another branch called ```modals```.  This was done in order to attempt to overcome the many bugs and issues I had with creating my set player name bootstrap modal.  However as seems to be the theme with this project I somehow had another issue which was when merging the two and nearly lost a lot of code.  I then abandoned the idea of using another branch (due to much more lost time trying to recover it) and just maintained the code in the master branch.
 
 ### Running locally
 

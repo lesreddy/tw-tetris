@@ -49,23 +49,23 @@ Features include 10 levels, a realtime score, level and time update all designed
 
 ### Goals
 
-The primary purpose was to build a very recognisable game for the user/player with as much Javascript as possible to expediate the developers (a beginner) learning of it.
+The primary purpose was to build a very recognisable game for the user/player with as much Javascript as possible to expediate the developers (a beginner) learning of it.  
 
 ### User Stories
 
+As a player I want the following:
+
 1. The game to look as much like a real tetris game as possible.
 
-2.  Ensure that there was a bulk of it made with pure Javascript.
+2.  That it is easy to use with clear menus and instructions.
 
-3.  Easy to use with clear menus and instructions.
+3.  There is a small fun learning component to it.
 
-4.  Small fun learning component to it.
+4.  There is a Bright and colourful theme to resonate and reiterate the fun nature of the game.
 
-5.  Bright and colourful to resonate and reiterate the fun nature of the game.
+5.  There is appropriate background music that can be switched on and off.
 
-6.  Appropriate background music that can be switched on and off.
-
-7.  Create a feature that gives the game a bit of a point of difference.
+6.  There is a feature that gives the game a bit of a point of difference.
 
 ### Design
 
@@ -86,7 +86,11 @@ The colour scheme is meant to potray strong bright and colourful images against 
 
 ### Wireframes
 
-[Figma](https://www.figma.com/file/JQ5LJHzOdLoZvROewrwEzDgW/Totally-Wild-Tetris?node-id=14%3A76) was used to create the wireframes. 
+[Figma](https://www.figma.com/files/recent) was used to create the wireframes. 
+
+[Desktop-Design](https://www.figma.com/file/JQ5LJHzOdLoZvROewrwEzDgW/Totally-Wild-Tetris?node-id=0%3A1) can be viewed here.
+[Mobile-Design](https://www.figma.com/file/JQ5LJHzOdLoZvROewrwEzDgW/Totally-Wild-Tetris?node-id=14%3A76) can be viewed here.
+[Ux-Notes](https://www.figma.com/file/JQ5LJHzOdLoZvROewrwEzDgW/Totally-Wild-Tetris?node-id=6%3A69) can be viewed here.
 
 
 ## Features
@@ -128,8 +132,8 @@ The following technologies were used to construct the site:
 1. [VSCode](https://code.visualstudio.com/) - a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. 
 2. [Bootstrap](https://www.bootstrapcdn.com/) - used to simplify the structure and to make it responsive.
 3. [Bootbox](http://bootboxjs.com/getting-started.html) - required in order to get the player name modal to work.
-4. [jQuery](https://www.jquery.com) - a required library for Bootbox.
-5. [PopperJS](https://popper.js.org/) - also a required JS library to run Bootbox
+4. [jQuery](https://www.jquery.com) - a required library for bootstrap and also used it with the modals.
+5. [PopperJS](https://popper.js.org/) - required to run Bootstrap.
 6. [Google Fonts](https://fonts.google.com/) - used to style the website fonts.
 
 ### Languages
@@ -160,29 +164,31 @@ When I tried to implement the bootstrap ```#playerNameModal``` It unfortunately 
 
 ### User Stories
 
+As a player I want to
+
 1. The game to look as much like a real tetris game as possible.
 
 This is achieved and the player can immediately tell this when the game is launched
 
-2.  Ensure that there was a bulk of it made with pure Javascript.
-
-This is the case as the actual game mechanics was built using vanilla javascript, however jquery is used throughout.
-
-3.  Easy to use with clear menus and instructions.
+2.  That it is easy to use with clear menus and instructions.
 
 This could be better as there is currently no about screen but the simple nature of it means that it quite easy to use on larger screens and any device with a keyboard.
 
-4.  Small fun learning component to it.
+3.  There is a small fun learning component to it.
 
 This is achieved using the end game modal which tells a different fun fact at the end of each level.
 
-5.  Bright and colourful to resonate and reiterate the fun nature of the game.
+4.  That it is bright and colourful to resonate and reiterate the fun nature of the game.
 
 This is achieved with the typography and colorful nature of the game but the overall look could be more appealing
 
-6.  Appropriate background music that can be switched on and off.
+5.  There is appropriate background music that can be switched on and off.
 
 This is not yet achieved.
+
+6.  There is a feature that gives the game a bit of a point of difference.
+
+This is achieved with the background image changes as the player achieves points in increments of 250 (ie 250 is 1st level, 500 is 2nd level with a new background, 750 is 3rd level with new background etc)
 
 
 ### Bugs

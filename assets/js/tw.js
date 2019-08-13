@@ -408,13 +408,13 @@ function updateScore() {
 
 const colors = [
 	null,
-	'#FF0D72',
-	'#0DC2FF',
-	'#0DFF72',
-	'#F538FF',
-	'#FF8E0D',
-	'#FFE138',
-	'#3877FF'
+	'#2CF140',
+	'#DD2828',
+	'#BC1D90',
+	'#1D79BC',
+	'#E8FB16',
+	'#F3B617',
+	'#7ED3E5'
 ];
 
 const arena = createMatrix(12, 20);

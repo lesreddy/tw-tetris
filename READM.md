@@ -285,3 +285,4 @@ By enlarge this project has been quite difficult and at times a frustrating proc
 There are still many elements to implement in order to complete it and I am not happy with the current state. I will go back and fix all the elements once I have built a better knowledge base, experience and time.
 
 Whilst This project gave me a great insight into how challenging coding can actually be I have come out the other end with a project that I am not overly happy with but with a much better plan on how to approach the next one and a vastly improved knowledge in javascript which was my main goal as a developer, so from that sense it was a success.  On my next project I will be keeping things very simple and building up rather than trying anything too complex and too far out of my comfort zone.
+

@@ -54,7 +54,6 @@ let playerName = localStorage.getItem("playerName");
 	playerName = $('#playername').val();
 	localStorage.setItem("playerName", playerName);
 	$('#player').text(playerName);
-	return;
 }
 
 $('#player-name-submit-button').click(function() {

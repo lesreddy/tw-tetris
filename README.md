@@ -3,7 +3,7 @@
 </h1>
 
 
-<div align="center"> 
+<div align="center">  
 
 [Totally Wild Tetris](https://lesreddy.github.io/tw-tetris/) is a colourful animal themed version of the classic brick building game that was first released back in [1984!](https://en.wikipedia.org/wiki/Tetris) 
 Features include 10 levels, a realtime score, level and time update all designed in a simple and colourful way.  As a beginner developer the main purpose of this project was to improve my skills in Javascript which whilst I enjoy I currently find very challenging!

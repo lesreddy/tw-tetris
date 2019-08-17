@@ -45,7 +45,7 @@
                                     <p class="sub">Name:</p>
                                 </div>
                                 <div class="col-8 col-lg-6">
-                                    <p class="pt-2 main-key-values" id="player"></p>
+                                    <p class="pt-2 main-key-values" id="targetElementForPlayerName"></p>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                             <div class="row">
                                 <!-- set player name button -->
                                 <div class="col-6 text-center space">
-                                        <button class="btn-block btn-success playerNameLaunch">Set Player Name</button>
+                                        <button class="btn-block btn-success" id="playerNameModalLaunch">Set Player Name</button>
                                     </div>
                                 <!-- restart game button  -->
                                 <div class="col-6 text-center space">
@@ -161,7 +161,7 @@
         <div class="row mt-3">
             <!-- set player name button -->
             <div class="col-6 text-center space">
-                    <button class="btn-block btn-success playerNameLaunch">Set Player Name</button>
+                    <button class="btn-block btn-success" id="playerNameModalLaunch">Set Player Name</button>
                 </div>
             <!-- restart game button  -->
             <div class="col-6 text-center space">
@@ -171,7 +171,7 @@
     </div>
 
 
-<!-- Player name Modal -->
+<!-- Player name Modal 
 <div class="modal fade" id="playerNameModal" tabindex="-1" role="dialog" aria-labelledby="playerNameModal" aria-hidden="true"> 
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -181,15 +181,15 @@
                 </div>
                 <div class="modal-body col-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="playername" name="playername" maxlength="15" aria-label="Type name here" required>
+                        <input type="text" class="form-control" id="playerNameModalInput" name="playerNameModalInput" maxlength="15" aria-label="Type name here" required>
                     </div>
                 </div>
                 <div class="modal-footer text-center space">
-                    <button id="player-name-submit-button" class="btn btn-success" aria-label="Submit Button">Submit</button>
+                    <button id="playerNameModalSubmit" class="btn btn-success" aria-label="Submit Button">Submit</button>
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
 
     <!-- Finish Game Modal -->
     <div class="modal fade" id="finishGameModal" tabindex="-1" role="dialog" aria-labelledby="finishGameModal"

@@ -1,6 +1,131 @@
 
+/*  the below code demonstrates many failed attempts to get my playerNameModal to work, have kept the comments to come back to later when I work out how to fix 
+
+
+
+var playerName = localStorage.getItem("playerName");
+
+
+$(document).ready(function () {
+    checkIfPlayer();
+});
+
+function checkIfPlayer() {
+    if ((playerName === null) || (playerName === "")) {
+        
+local.Storage.setitem("playerName", "Player1");
+document.getElementById('targetElementForPlayerName') = playerName;
+    }
+    else {
+        playerName = localStorage.getItem("playerName");
+    }
+}
+
+
+function playerNameSubmitButton() {
+    playerName = $('#playerNameModalInput').val();
+    
+    localStorage.setItem("playerName", playerName);
+    
+    playerNameData();
+    
+    }
+
+function playerNameData() {
+    document.getElementById('targetElementForPlayerName') = playerName;    
+}
+
+/* $('#playerNameModal').on('click', '#playerNameModalSubmit', function(){
+    var value = $('#playerNameM
+
+
+
+odalInput').val();
+    $('#targetElementForPlayerName').val(value);
+    $('#playerNameModal').modal('hide');
+}); */
+
+
+
+/*
+$("#playerNameModalSubmit").click(function (e) { 
+    e.playerNameSubmitButton();
+});
+
+/**
+ * 
+ This function is designed to set the player name using local storage and activated when the set player name modal initialises
+ */
+
+ /* function playerNameSubmitButton() {
+    let playerName = $("#playerNameModalInput").val();
+    if (playerName) {
+        // If there is a playername we will set it
+		 localStorage.setItem("playerName", playerName);
+	 }
+    else {
+        // Since we do not have a playername we will call it Player 1
+        localStorage.setItem("playerName", 'Player 1');
+    }
+}
+
+
+
+
+
+function checkIfPlayer() {
+	let playerName = $("#playerNameModalInput").val();
+	if (localStorage.getItem("playerName") === null) {
+        localStorage.setItem("playerName", 'Player 1');
+    } else {
+        $('#targetElementForPlayerName').html(localStorage.setItem("playerName", playerName));
+    }
+};
+
+$(document).ready(function () {
+    checkIfPlayer();
+});
+
+$('#playerNameModalLaunch').click(function() {
+    $('#playerNameModal').modal('show');
+}); */
+
+/**
+  * This function was implemented referencing my mentor (simen Daelin's: https://github.com/Eventyret/tetris-game/blob/master/assets/js/misc.js) z 
+  * The reason for this is that after way too much time and effort I could not get my playerNameModal to work properly so this actually got a name entry to work
+  *  */ 
+ function playerName(z){
+	var z = bootbox.prompt("Let's set your playername", function display(z) {
+	  if (z != null) {
+		  document.getElementById("targetElementForPlayerName").innerHTML = z;
+		  localStorage.playername = z;
+		  
+		  dis(z);
+	  }
+	  else
+		  document.getElementById("targetElementForPlayerName").innerHTML = "New Player";
+	});
+	}
+	function dis(arg) {
+	  bootbox.alert("Player name set to " + arg);
+	}
+	if(localStorage.playername === undefined) {
+	  document.getElementById("targetElementForPlayerName").innerHTML = "Player 1";
+	} else {
+	  document.getElementById("targetElementForPlayerName").innerHTML = localStorage.playername;
+	}
+
+
+	$('#playerNameModalLaunch').click(function() {
+		playerName();
+	}); 
+
+	
+
+
 /**
  * Changes the Title 'Totally Wild Tetris' main logo to a rainbow colour style
+ * sourced from https://codepen.io/rileyjshaw/pen/vExWpe
  */
 (function () {
   var angle = 0;
@@ -28,7 +153,7 @@
 
 
 /**
- * Resets the game
+ * Resets the game from the in game menu button
  */ 
 document.getElementById("gamerestart").addEventListener("click", resetGame);
  function resetGame(e){
@@ -44,56 +169,10 @@ document.getElementById("newGame").addEventListener("click", resetGame);
 	location.reload();
 }
 
-let playerName = localStorage.getItem("playerName");
-
-/**
- * 
- This function is designed to set the player name using local storage and activated when the set player name modal inititalises
- */
- function playerNameSubmitButton() {
-	playerName = $('#playername').val();
-	localStorage.setItem("playerName", playerName);
-	$('#player').text(playerName);
-}
-
-$('#player-name-submit-button').click(function() {
-    playerNameSubmitButton();
-}); 
-
-$('.playerNameLaunch').click(function() {
-    $('#playerNameModal').modal('show');
-}); 
 
 
 
-/**
- * 
- * This function was implemented referencing my mentor (simen Daelin's: https://github.com/Eventyret/tetris-game/blob/master/assets/js/misc.js) z 
- * The reason for this was because I could not get my modal to work properly(#playerNameModal)
- */
-/* function playerName(z){
-	var z = bootbox.prompt("Let's set your playername", function display(z) {
-	  if (z != null) {
-		  document.getElementById("playername").innerHTML = z;
-		  localStorage.playername = z;
-		  
-		  dis(z);
-	  }
-	  else
-		  document.getElementById("playername").innerHTML = "New Player";
-	});
-	}
-	function dis(arg) {
-	  bootbox.alert("Player name set to " + arg);
-	}
-	if(localStorage.playername === undefined) {
-	  document.getElementById("playername").innerHTML = "Player 1";
-	} else {
-	  document.getElementById("playername").innerHTML = localStorage.playername;
-	}
-
-	*/
-
+ 
 /**
  * Sets up the Canvas
  */

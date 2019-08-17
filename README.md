@@ -153,7 +153,7 @@ The end result was spending way too much time to achieve very little and not an 
 
 ### Modals
 
-When I tried to implement the bootstrap ```#playerNameModal``` It unfortunately caused an error which did not keep the name that I had set for local storage with the code that I used. Attempted with javascript, then Jquery with no success.  It also caused a problem with the ```finishGameModal``` where it would not actually initialise and the screen just went dark.  After failing heavily with this process I aborted and then implemented the only thing that worked which was a bootbox modal referenced from my mentor's project.
+When I tried to implement the bootstrap ```#playerNameModal``` It unfortunately caused an error which did not keep the name that I had set for local storage with the code that I used. Attempted with javascript, then Jquery with no success.  It also caused a problem with the ```finishGameModal``` where it would not actually initialise and the screen just went dark.  After failing heavily with this process I aborted and then implemented the only thing that worked which was a bootbox modal referenced from my mentor's project.  The time lost on this error was significant, I am determined to re-submit this project with this fixed when time permits.
 
 
 
@@ -280,9 +280,9 @@ I have to thank my mentor Simen Daelin for helping me understand the concepts an
 
 ## Reflections
 
-By enlarge this project has been quite difficult and at times a frustrating process.  The idea was to utilise a purely javascript game and re-build it in my own way.  The problem was that it took me two weeks just to build the basic game engine and even after significant analysis I found it very difficult to understand the code, which costed more time than expected.  This then gave me less time and confidence to build the other elements of the game.
+By enlarge this project has been quite difficult and at times a very frustrating process.  The idea was to utilise a purely javascript game and re-build it in my own way.  The problem was that it took me two weeks just to build the basic game engine and even after significant analysis I found it very difficult to understand the code, which costed more time than expected.  This then gave me less time and confidence to build the other elements of the game.
 
-There are still many elements to implement in order to complete it and I am not happy with the current state. I will go back and fix all the elements once I have built a better knowledge base, experience and time.
+There are still many elements to implement in order to complete it and I am not happy with the current state. I will go back and fix all the elements once I have built a better knowledge base, experience and have more time.
 
 Whilst This project gave me a great insight into how challenging coding can actually be I have come out the other end with a project that I am not overly happy with but with a much better plan on how to approach the next one and a vastly improved knowledge in javascript which was my main goal as a developer, so from that sense it was a success.  On my next project I will be keeping things very simple and building up rather than trying anything too complex and too far out of my comfort zone.
 
